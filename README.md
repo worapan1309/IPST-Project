@@ -9,7 +9,7 @@ Folder
   - TestCases: เก็บ test cases สำหรับ automated testing (.robot)
   - TestData: เก็บ test data ที่จำเป็นต้องใช่ในการทดสอบ (.yaml)
   
-การตั้งชื่อตัวแปร Locator -> ${PAGE.NAME.TYPE} เช่น ${HOME.VDTOUCH.INPUT}    xPath=//input
-การตั้งชื่อตัวแปร Mock (ทดสอบเล่น ๆ ยังไม่ใช่ของจริง) -> ${page.name.type} เช่น ${home.vdtouch.input}    xPath=//input
-การตั้งชื่อไฟล์ -> ใช้ตัวพิมพ์เล็กและมี _ คั่น เช่น login_page.resource
-การตั้งชื่อ Keyword -> เว้นวรรคแต่ละคำ และเขียนคำต่อไปด้วยตัวพิมพ์ใหญ่ เช่น Click Login Button
+- การตั้งชื่อตัวแปร Locator -> ${PAGE.NAME.TYPE} เช่น ${HOME.VDTOUCH.INPUT}    xPath=//input
+- การตั้งชื่อตัวแปร Mock (ทดสอบเล่น ๆ ยังไม่ใช่ของจริง) -> ${page.name.type} เช่น ${home.vdtouch.input}    xPath=//input
+- การตั้งชื่อไฟล์ -> ใช้ตัวพิมพ์เล็กและมี _ คั่น เช่น login_page.resource
+- การตั้งชื่อ Keyword -> เว้นวรรคแต่ละคำ และเขียนคำต่อไปด้วยตัวพิมพ์ใหญ่ เช่น Click Login Button
