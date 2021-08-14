@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.3 (Python 3.9.0 on win32)" generated="20210814 14:56:42.217" rpa="false" schemaversion="2">
+<suite id="s1" name="Dashboard IPST" source="D:\Work\สสวท\IPST-Project\TestCases\Dashboard_IPST.robot">
+<test id="s1-t1" name="Open Chrome">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_IPST}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210814 14:56:42.418" level="INFO">Opening browser 'chrome' to base url 'http://202.139.199.68:3000/'.</msg>
+<status status="PASS" starttime="20210814 14:56:42.417" endtime="20210814 14:56:46.007"/>
+</kw>
+<status status="PASS" starttime="20210814 14:56:42.417" endtime="20210814 14:56:46.007"/>
+</test>
+<test id="s1-t2" name="Open Edge">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_IPST}</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210814 14:56:46.009" level="INFO">Opening browser 'edge' to base url 'http://202.139.199.68:3000/'.</msg>
+<status status="PASS" starttime="20210814 14:56:46.009" endtime="20210814 14:56:50.581"/>
+</kw>
+<status status="PASS" starttime="20210814 14:56:46.008" endtime="20210814 14:56:50.582"/>
+</test>
+<status status="PASS" starttime="20210814 14:56:42.218" endtime="20210814 14:56:50.583"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Dashboard IPST">Dashboard IPST</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210814 14:56:42.412" level="ERROR">Error in file 'D:\Work\สสวท\IPST-Project\TestCases\Dashboard_IPST.robot' on line 4: Processing variable file 'D:\Work\สสวท\IPST-Project\TestData\data.yaml' failed: YAML variable file must be a mapping, got None.</msg>
+<msg timestamp="20210814 14:56:42.413" level="WARN">Imported resource file 'D:\Work\สสวท\IPST-Project\Resources\Keywords\Pages\Dashboard_IPST.resource' is empty.</msg>
+<msg timestamp="20210814 14:56:42.415" level="WARN">Imported resource file 'D:\Work\สสวท\IPST-Project\Resources\Locator\Pages\Dashboard_IPST.resource' is empty.</msg>
+</errors>
+</robot>
