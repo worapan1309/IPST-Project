@@ -7,6 +7,10 @@ ${CHROME_DRIVER_PATH}      ${EXECDIR}${/}drivers${/}chrome${/}mac${/}chromedrive
 ${MS_EDGE_DRIVER_PATH}     ${EXECDIR}${/}drivers${/}microsoft_edge${/}msedgedriver_92
 ${FIREFOX_DRIVER_PATH}     ${EXECDIR}${/}drivers${/}firefox${/}mac${/}geckodriver_0_29_0
 
+${CHROME_DRIVER_PATH_WIN}     ../drivers/chrome/window/chromedriver
+${MS_EDGE_DRIVER_PATH_WIN}     ../drivers/microsoft_edge/window/MicrosoftWebDriver
+${FIREFOX_DRIVER_PATH_WIN}     ../drivers/firefox/window/geckodriver
+
 *** Keywords ***
 Open Safari Browser
     [Arguments]    ${url}
@@ -23,7 +27,7 @@ Open Chrome Browser
     Call Method    ${chrome_options}    add_argument    --ignore-certificate-errors
     Call Method    ${chrome_options}    add_argument    --disable-extensions
     ${options}=     Call Method     ${chrome_options}    to_capabilities
-    ${kwargs}=    BuiltIn.Create Dictionary    executable_path=${CHROME_DRIVER_PATH} 
+    ${kwargs}=    BuiltIn.Create Dictionary    executable_path=${CHROME_DRIVER_PATH_WIN} 
     log  ${chrome_options}
     Create Webdriver    Chrome    chrome_options=${chrome_options}    kwargs=${kwargs}
     Go To      ${url}
@@ -33,13 +37,13 @@ Open Microsoft Edge Browser
     ...     pip install -U -pre selenium==4.0.0b2
     [Arguments]    ${url}
     ${ms_edge_option} =    Evaluate    sys.modules['selenium.webdriver'].EdgeOptions()    sys, selenium.webdriver
-    Create Webdriver    Edge    executable_path=${MS_EDGE_DRIVER_PATH} 
+    Create Webdriver    Edge    executable_path=${MS_EDGE_DRIVER_PATH_WIN} 
     Go To    ${url}
 
 Open Firefox Browser
     [Arguments]    ${url}
     ${firefox_options} =     Evaluate    sys.modules['selenium.webdriver'].common.desired_capabilities.DesiredCapabilities.FIREFOX    sys, selenium.webdriver
-    Create Webdriver    Firefox    capabilities=${firefox_options}    executable_path=${FIREFOX_DRIVER_PATH} 
+    Create Webdriver    Firefox    capabilities=${firefox_options}    executable_path=${FIREFOX_DRIVER_PATH_WIN} 
     Go To      ${url}
 
 Close Browser
