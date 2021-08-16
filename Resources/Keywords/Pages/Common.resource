@@ -7,9 +7,9 @@ ${CHROME_DRIVER_PATH_MAC}      ${EXECDIR}${/}drivers${/}chrome${/}mac${/}chromed
 ${MS_EDGE_DRIVER_PATH_MAC}     ${EXECDIR}${/}drivers${/}microsoft_edge${/}msedgedriver_92
 ${FIREFOX_DRIVER_PATH_MAC}     ${EXECDIR}${/}drivers${/}firefox${/}mac${/}geckodriver_0_29_0
 
-${CHROME_DRIVER_PATH_WIN}     ../drivers/chrome/window/chromedriver
-${MS_EDGE_DRIVER_PATH_WIN}     ../drivers/microsoft_edge/window/MicrosoftWebDriver
-${FIREFOX_DRIVER_PATH_WIN}     ../drivers/firefox/window/geckodriver
+${CHROME_DRIVER_PATH_WIN}     ${EXECDIR}${/}drivers${/}chrome${/}window${/}chromedriver
+${MS_EDGE_DRIVER_PATH_WIN}     ${EXECDIR}${/}drivers${/}microsoft_edge${/}window${/}MicrosoftWebDriver
+${FIREFOX_DRIVER_PATH_WIN}     ${EXECDIR}${/}drivers${/}firefox${/}window${/}geckodriver
 
 *** Keywords ***
 Open Safari Browser

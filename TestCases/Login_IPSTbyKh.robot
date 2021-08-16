@@ -15,10 +15,10 @@ Resource    ../Resources/Locator/Pages/Login_IPST.resource
 #     Open Chrome Browser  ${URL_IPST}
 
 Open Browser
-    Open Browser And Go To URL  Chrome      ${URL_IPST}
-    Open Browser And Go To URL  Firefox     ${URL_IPST}
-    Open Browser And Go To URL  Edge        ${URL_IPST}
-    Open Browser And Go To URL  Safari      ${URL_IPST}
+    Open Browser And Go To URL  Chrome      ${URL_IPST}     WIN
+    Open Browser And Go To URL  Firefox     ${URL_IPST}     WIN
+    Open Browser And Go To URL  Edge        ${URL_IPST}     WIN
+    Open Browser And Go To URL  Safari      ${URL_IPST}     WIN
 
 
 
