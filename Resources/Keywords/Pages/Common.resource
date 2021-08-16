@@ -30,6 +30,7 @@ Open Chrome Browser
 
 Open Microsoft Edge Browser
     [Documentation]  ถ้าเป็น Microsoft Edge Ver. 81 ขึ้นไป จะต้อง Upgrade pacakage selenium version 4.0.0b2 ถึงจะสามารถใช้งานได้
+    ...     pip install -U -pre selenium==4.0.0b2
     [Arguments]    ${url}
     ${ms_edge_option} =    Evaluate    sys.modules['selenium.webdriver'].EdgeOptions()    sys, selenium.webdriver
     Create Webdriver    Edge    executable_path=${MS_EDGE_DRIVER_PATH} 
