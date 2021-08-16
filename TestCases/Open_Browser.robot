@@ -1,5 +1,6 @@
 *** Settings ***
-Resource    ${EXECDIR}${/}Resources${/}Keywords${/}Pages${/}Common.resource
+Resource    ../Resources/Keywords/Pages/Common.resource
+
 Test Teardown   Common.Close Browser
 
 
@@ -18,6 +19,3 @@ TC004 : Open Edge Browser
 
 TC005 : Open Firefox Browser
     Open Browser And Go To URL    Firefox    https://www.google.com/
-
-TC006 : Open Opera Browser
-    Open Browser And Go To URL    Opera    https://www.google.com/
