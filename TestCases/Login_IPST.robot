@@ -2,6 +2,7 @@
 Library     SeleniumLibrary
 Variables   ../TestData/environment.yaml
 Variables   ../TestData/data.yaml
+Resource    ${EXECDIR}${/}Resources${/}Keywords${/}Pages${/}common_keywords.robot
 Resource    ../Resources/Keywords/Pages/Common.resource
 Resource    ../Resources/Keywords/Pages/Login_IPST.resource
 Resource    ../Resources/Locator/Pages/Login_IPST.resource
