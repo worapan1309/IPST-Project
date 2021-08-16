@@ -12,10 +12,10 @@ TC002 : Open Chrome Browser
     Open Browser And Go To URL    Chrome    https://www.google.com/
 
 TC003 : Open Microsoft Edge Browser
-    Open Browser And Go To URL    Microsoft Edge    https://www.google.com/
+    Open Browser And Go To URL    Microsoft Edge    https://www.google.com/     MAC
 
 TC004 : Open Edge Browser
-    Open Browser And Go To URL    Edge    https://www.google.com/
+    Open Browser And Go To URL    Edge    https://www.google.com/       WIN
 
 TC005 : Open Firefox Browser
     Open Browser And Go To URL    Firefox    https://www.google.com/
