@@ -19,6 +19,7 @@ Open Safari Browser
     ...    2. ไปที่ Menu Safari > Preference > Tab Advance > Click Checkbox "Show Develop menu in menu bar"
     ...    3. ไปที่ Menu Develop > Click "Allow Remote Automation"
     Open Browser    browser=Safari    url=${url}
+    Maximize Browser Window
 
 Open Chrome Browser
     [Arguments]    ${url}   ${os}
@@ -30,6 +31,7 @@ Open Chrome Browser
     ${kwargs}=    BuiltIn.Create Dictionary    executable_path=${CHROME_DRIVER_PATH_${os}} 
     log  ${chrome_options}
     Create Webdriver    Chrome    chrome_options=${chrome_options}    kwargs=${kwargs}
+    Maximize Browser Window
     Go To      ${url}
 
 Open Microsoft Edge Browser
@@ -38,12 +40,14 @@ Open Microsoft Edge Browser
     [Arguments]    ${url}   ${os}
     ${ms_edge_option} =    Evaluate    sys.modules['selenium.webdriver'].EdgeOptions()    sys, selenium.webdriver
     Create Webdriver    Edge    executable_path=${MS_EDGE_DRIVER_PATH_${os}} 
+    Maximize Browser Window
     Go To    ${url}
 
 Open Firefox Browser
     [Arguments]    ${url}   ${os}
     ${firefox_options} =     Evaluate    sys.modules['selenium.webdriver'].common.desired_capabilities.DesiredCapabilities.FIREFOX    sys, selenium.webdriver
     Create Webdriver    Firefox    capabilities=${firefox_options}    executable_path=${FIREFOX_DRIVER_PATH_${os}} 
+    Maximize Browser Window
     Go To      ${url}
 
 Close Browser
