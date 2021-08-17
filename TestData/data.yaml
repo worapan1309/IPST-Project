@@ -1,1 +1,2 @@
-ERROR_PASSWORD: "กรุณากรอกรหัสผ่าน"
+ERROR_PASSWORD_IPST: "กรุณากรอกรหัสผ่าน"
+ERROR_EMAIL_IPST: "กรุณากรอกอีเมล"
