@@ -63,11 +63,11 @@ Open Browser And Go To URL
 
 Wait And Click Element
     [Arguments]     ${element}
-    Wait Until Element Is Visible   ${element}
+    Wait Until Element Is Visible   ${element}      20s
     Click Element   ${element}
 
 Wait And Fill Text
-    [Arguments]     ${locator}      ${text}
-    Wait Until Element Is Visible   ${locator}
+    [Arguments]     ${locator}      ${text}         
+    Wait Until Element Is Visible   ${locator}      20s
     Input Text      ${locator}   ${text}
 
