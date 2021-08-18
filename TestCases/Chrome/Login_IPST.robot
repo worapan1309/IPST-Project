@@ -5,7 +5,7 @@ Resource          ${EXECDIR}${/}Resources${/}Keywords${/}Pages${/}Common.resourc
 Resource          ${EXECDIR}${/}Resources${/}Keywords${/}Pages${/}Login_IPST.resource
 Resource          ${EXECDIR}${/}Resources${/}Locator${/}Pages${/}Login_IPST.resource
 
-Test Setup      Open Browser And Go To URL      Chrome      ${URL_IPST}     WIN
+Test Setup      Open Browser And Go To URL      Chrome      ${URL_IPST}     
 Test Teardown   Close Browser
 
 *** Test Cases ***
