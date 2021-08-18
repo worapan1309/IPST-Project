@@ -5,26 +5,26 @@ Resource          ${EXECDIR}${/}Resources${/}Keywords${/}Pages${/}Common.resourc
 Resource          ${EXECDIR}${/}Resources${/}Keywords${/}Pages${/}Login_IPST.resource
 Resource          ${EXECDIR}${/}Resources${/}Locator${/}Pages${/}Login_IPST.resource
 
-Test Setup      Open Browser And Go To URL      Edge      ${URL_IPST}     MAC
+Test Setup      Open Browser And Go To URL      Edge      ${URL_IPST}    
 Test Teardown   Close Browser
 
 *** Test Cases ***
 Login_001
     [Documentation]     Login Should Be Success: Teacher Role
     [Tags]              login
-    Login Success: IPST Website    ${LOGIN_EMAIL_TEACHER}  ${LOGIN_PASSWORD_TEACHER}
+    Login: IPST Website    ${LOGIN_EMAIL_TEACHER}  ${LOGIN_PASSWORD_TEACHER}
     Check Role Of Account   ครู
 
 Login_002
     [Documentation]     Login Should Be Success: Student Role
     [Tags]              login
-    Login Success: IPST Website    ${LOGIN_EMAIL_STUDENT}  ${LOGIN_PASSWORD_STUDENT}
+    Login: IPST Website    ${LOGIN_EMAIL_STUDENT}  ${LOGIN_PASSWORD_STUDENT}
     Check Role Of Account   นักเรียน
 
 Login_003
     [Documentation]     Login Should Be Success: Parent Role
     [Tags]              login
-    Login Success: IPST Website    ${LOGIN_EMAIL_PARENT}  ${LOGIN_PASSWORD_PARENT}
+    Login: IPST Website    ${LOGIN_EMAIL_PARENT}  ${LOGIN_PASSWORD_PARENT}
     Check Role Of Account   ผู้ปกครอง
 
 Login_004

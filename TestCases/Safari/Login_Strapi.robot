@@ -6,7 +6,7 @@ Resource          ${EXECDIR}${/}Resources${/}Keywords${/}Pages${/}Login_Strapi.r
 Resource          ${EXECDIR}${/}Resources${/}Locator${/}Pages${/}Login_Strapi.resource
 
 Force Tags       login_strapi_mac 
-Suite Setup      Open Browser And Go To URL      Edge      ${URL_STRAPI}    
+Suite Setup      Open Browser And Go To URL      Safari      ${URL_STRAPI}     
 Suite Teardown   Close Browser
 
 *** Test Cases ***
@@ -29,8 +29,7 @@ Login_003
     [Tags]              login
     Wait And Fill Text      ${LOGIN_STRAPI.EMAIL.FIELD}   ${LOGIN_EMAIL_STRAPI}
     Wait And Click Element   ${LOGIN_STRAPI.CONFIRMLOGIN.BTN}
-    ${status}   ${value}=   Run Keyword And Ignore Error    Check Error Message     ${LOGIN_STRAPI.REQUIREDPASSWORD.MSG}    ${REQUIRED_PASSWORD_STRAPI}
-    Run Keyword If  '${status}' == 'FAIL'   Check Error Message     ${LOGIN_STRAPI.REQUIREDPASSWORD.MSG}    ${REQUIRED_THAI_STRAPI}
+    Check Error Message     ${LOGIN_STRAPI.REQUIREDPASSWORD.MSG}    ${REQUIRED_PASSWORD_STRAPI}
     [Teardown]          Clear Input 
 
 Login_004
@@ -38,18 +37,15 @@ Login_004
     [Tags]              login
     Wait And Fill Text      ${LOGIN_STRAPI.PASSWORD.FIELD}   ${LOGIN_PASSWORD_STRAPI}
     Wait And Click Element   ${LOGIN_STRAPI.CONFIRMLOGIN.BTN}
-    ${status}   ${value}=   Run Keyword And Ignore Error    Check Error Message     ${LOGIN_STRAPI.REQUIREDEMAIL.MSG}    ${REQUIRED_EMAIL_STRAPI}
-    Run Keyword If  '${status}' == 'FAIL'   Check Error Message     ${LOGIN_STRAPI.REQUIREDEMAIL.MSG}    ${REQUIRED_THAI_STRAPI}
+    Check Error Message     ${LOGIN_STRAPI.REQUIREDEMAIL.MSG}   ${REQUIRED_EMAIL_STRAPI}
     [Teardown]          Clear Input 
 
 Login_005
     [Documentation]     Not Filled Both Email And Password
     [Tags]              login
     Wait And Click Element   ${LOGIN_STRAPI.CONFIRMLOGIN.BTN}
-    ${status}   ${value}=   Run Keyword And Ignore Error    Check Error Message     ${LOGIN_STRAPI.REQUIREDEMAIL.MSG}    ${REQUIRED_EMAIL_STRAPI}
-    Run Keyword If  '${status}' == 'FAIL'   Check Error Message     ${LOGIN_STRAPI.REQUIREDEMAIL.MSG}    ${REQUIRED_THAI_STRAPI}
-    ${status}   ${value}=   Run Keyword And Ignore Error    Check Error Message     ${LOGIN_STRAPI.REQUIREDPASSWORD.MSG}    ${REQUIRED_PASSWORD_STRAPI}
-    Run Keyword If  '${status}' == 'FAIL'   Check Error Message     ${LOGIN_STRAPI.REQUIREDPASSWORD.MSG}    ${REQUIRED_THAI_STRAPI}
+    Check Error Message     ${LOGIN_STRAPI.REQUIREDEMAIL.MSG}   ${REQUIRED_EMAIL_STRAPI}
+    Check Error Message     ${LOGIN_STRAPI.REQUIREDPASSWORD.MSG}    ${REQUIRED_EMAIL_STRAPI}
     [Teardown]          Clear Input 
 
 Login_006
