@@ -5,9 +5,8 @@ Resource          ${EXECDIR}${/}Resources${/}Keywords${/}Pages${/}Common.resourc
 Resource          ${EXECDIR}${/}Resources${/}Keywords${/}Pages${/}Login_Strapi.resource
 Resource          ${EXECDIR}${/}Resources${/}Locator${/}Pages${/}Login_Strapi.resource
 
-Suite Setup      Open Browser And Go To URL      Chrome      ${URL_STRAPI}     WIN
-Test Teardown    Clear Input
-Suite Teardown   Close Browser
+Test Setup     Open Browser And Go To URL      Chrome      ${URL_STRAPI}     WIN
+Test Teardown   Close Browser
 
 *** Test Cases ***
 Login_001
@@ -27,21 +26,24 @@ Login_003
     [Tags]              login
     Wait And Fill Text      ${LOGIN_STRAPI.EMAIL.FIELD}   ${LOGIN_EMAIL_STRAPI}
     Wait And Click Element   ${LOGIN_STRAPI.CONFIRMLOGIN.BTN}
-    Check Error Message     ${LOGIN_STRAPI.REQUIREDPASSWORD.MSG}    ${REQUIRED_PASSWORD_STRAPI}
-
+    ${status}   ${value}=   Run Keyword And Ignore Error    Check Error Message     ${LOGIN_STRAPI.REQUIREDPASSWORD.MSG}    ${REQUIRED_PASSWORD_STRAPI}
+    Run Keyword If  '${status}' == 'PASS'   Check Error Message     ${LOGIN_STRAPI.REQUIREDPASSWORD.MSG}    ${REQUIRED_THAI_STRAPI}
 Login_004
     [Documentation]     Not Filled Email
     [Tags]              login
     Wait And Fill Text      ${LOGIN_STRAPI.PASSWORD.FIELD}   ${LOGIN_PASSWORD_STRAPI}
     Wait And Click Element   ${LOGIN_STRAPI.CONFIRMLOGIN.BTN}
-    Check Error Message     ${LOGIN_STRAPI.REQUIREDEMAIL.MSG}   ${REQUIRED_EMAIL_STRAPI}
+    ${status}   ${value}=   Run Keyword And Ignore Error    Check Error Message     ${LOGIN_STRAPI.REQUIREDEMAIL.MSG}    ${REQUIRED_EMAIL_STRAPI}
+    Run Keyword If  '${status}' == 'PASS'   Check Error Message     ${LOGIN_STRAPI.REQUIREDEMAIL.MSG}    ${REQUIRED_THAI_STRAPI}
 
 Login_005
     [Documentation]     Not Filled Both Email And Password
     [Tags]              login
     Wait And Click Element   ${LOGIN_STRAPI.CONFIRMLOGIN.BTN}
-    Check Error Message     ${LOGIN_STRAPI.REQUIREDEMAIL.MSG}   ${REQUIRED_EMAIL_STRAPI}
-    Check Error Message     ${LOGIN_STRAPI.REQUIREDPASSWORD.MSG}    ${REQUIRED_EMAIL_STRAPI}
+    ${status}   ${value}=   Run Keyword And Ignore Error    Check Error Message     ${LOGIN_STRAPI.REQUIREDEMAIL.MSG}    ${REQUIRED_EMAIL_STRAPI}
+    Run Keyword If  '${status}' == 'PASS'   Check Error Message     ${LOGIN_STRAPI.REQUIREDEMAIL.MSG}    ${REQUIRED_THAI_STRAPI}
+    ${status}   ${value}=   Run Keyword And Ignore Error    Check Error Message     ${LOGIN_STRAPI.REQUIREDPASSWORD.MSG}    ${REQUIRED_PASSWORD_STRAPI}
+    Run Keyword If  '${status}' == 'PASS'   Check Error Message     ${LOGIN_STRAPI.REQUIREDPASSWORD.MSG}    ${REQUIRED_THAI_STRAPI}
 
 Login_006
     [Documentation]     Login Should Be Success

@@ -12,9 +12,6 @@ Login: Strapi Website
 Check Error Message
     [Arguments]     ${locator}      ${msg}
     Wait Until Element Is Visible       ${locator}
+    Sleep   1s
     ${error_msg}=   Get Text    ${locator}
     Should Be Equal     ${error_msg}     ${msg}
-
-Clear Input
-    Clear Element Text     ${LOGIN_STRAPI.EMAIL.FIELD}
-    Clear Element Text     ${LOGIN_STRAPI.PASSWORD.FIELD}

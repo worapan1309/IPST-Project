@@ -4,3 +4,4 @@ ERROR_LOGIN_IPST: "อีเมลหรือรหัสผ่านไม่�
 FAILED_LOGIN_STRAPI: "Invalid credentials "
 REQUIRED_PASSWORD_STRAPI: "This value is required"
 REQUIRED_EMAIL_STRAPI: "This value is required"
+REQUIRED_THAI_STRAPI: "ค่านี้เป็นค่าที่จำเป็น"
