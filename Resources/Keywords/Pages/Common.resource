@@ -7,9 +7,10 @@ ${CHROME_DRIVER_PATH_MAC}      ${EXECDIR}${/}drivers${/}chrome${/}mac${/}chromed
 ${MS_EDGE_DRIVER_PATH_MAC}     ${EXECDIR}${/}drivers${/}microsoft_edge${/}msedgedriver_92
 ${FIREFOX_DRIVER_PATH_MAC}     ${EXECDIR}${/}drivers${/}firefox${/}mac${/}geckodriver_0_29_0
 
-${CHROME_DRIVER_PATH_WIN}     ${EXECDIR}${/}drivers${/}chrome${/}window${/}chromedriver
+${CHROME_DRIVER_PATH_WIN}      ${EXECDIR}${/}drivers${/}chrome${/}window${/}chromedriver
 ${MS_EDGE_DRIVER_PATH_WIN}     ${EXECDIR}${/}drivers${/}microsoft_edge${/}window${/}MicrosoftWebDriver
 ${FIREFOX_DRIVER_PATH_WIN}     ${EXECDIR}${/}drivers${/}firefox${/}window${/}geckodriver
+${OS}                          WIN
 
 *** Keywords ***
 Open Safari Browser
@@ -54,11 +55,11 @@ Close Browser
     SeleniumLibrary.Close All Browsers
 
 Open Browser And Go To URL
-    [Arguments]    ${browser}    ${url}     ${os}=MAC
+    [Arguments]    ${browser}    ${url}     
     Run Keyword If    '${browser}'=='Safari'    Run Keyword      Open Safari Browser    ${url}
-    ...    ELSE IF    '${browser}'=='Chrome'    Run Keyword      Open Chrome Browser    ${url}     ${os} 
-    ...    ELSE IF    '${browser}'=='Microsoft Edge' or '${browser}'=='Edge'    Run Keyword      Open Microsoft Edge Browser    ${url}      ${os}
-    ...    ELSE IF    '${browser}'=='Firefox'   Run Keyword      Open Firefox Browser   ${url}     ${os}
+    ...    ELSE IF    '${browser}'=='Chrome'    Run Keyword      Open Chrome Browser    ${url}     ${OS} 
+    ...    ELSE IF    '${browser}'=='Microsoft Edge' or '${browser}'=='Edge'    Run Keyword      Open Microsoft Edge Browser    ${url}      ${OS}
+    ...    ELSE IF    '${browser}'=='Firefox'   Run Keyword      Open Firefox Browser   ${url}     ${OS}
     ...    ELSE       Run Keyword    Fail   ${browser} is not support
 
 Wait And Click Element

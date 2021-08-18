@@ -6,7 +6,7 @@ Resource          ${EXECDIR}${/}Resources${/}Keywords${/}Pages${/}Login_Strapi.r
 Resource          ${EXECDIR}${/}Resources${/}Locator${/}Pages${/}Login_Strapi.resource
 
 Force Tags       login_strapi_mac 
-Suite Setup      Open Browser And Go To URL      Edge      ${URL_STRAPI}     MAC
+Suite Setup      Open Browser And Go To URL      Edge      ${URL_STRAPI}    
 Suite Teardown   Close Browser
 
 *** Test Cases ***
