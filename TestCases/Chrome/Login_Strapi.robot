@@ -5,7 +5,8 @@ Resource          ${EXECDIR}${/}Resources${/}Keywords${/}Pages${/}Common.resourc
 Resource          ${EXECDIR}${/}Resources${/}Keywords${/}Pages${/}Login_Strapi.resource
 Resource          ${EXECDIR}${/}Resources${/}Locator${/}Pages${/}Login_Strapi.resource
 
-Suite Setup      Open Browser And Go To URL      Chrome      ${URL_STRAPI}     WIN
+Force Tags       login_strapi_mac 
+Suite Setup      Open Browser And Go To URL      Chrome      ${URL_STRAPI}     MAC
 Test Teardown    Clear Input
 Suite Teardown   Close Browser
 
