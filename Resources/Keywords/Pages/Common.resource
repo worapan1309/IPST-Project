@@ -19,6 +19,7 @@ Open Safari Browser
     ...    1. เปิด Safari ขึ้นมา
     ...    2. ไปที่ Menu Safari > Preference > Tab Advance > Click Checkbox "Show Develop menu in menu bar"
     ...    3. ไปที่ Menu Develop > Click "Allow Remote Automation"
+    Run Keyword IF  '${OS}'=='WIN'  Fail    msg=Window don't have Safari Browser
     Open Browser    browser=Safari    url=${url}
     Maximize Browser Window
 
