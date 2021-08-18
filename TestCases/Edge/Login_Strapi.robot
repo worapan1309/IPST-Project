@@ -29,7 +29,8 @@ Login_003
     [Tags]              login
     Wait And Fill Text      ${LOGIN_STRAPI.EMAIL.FIELD}   ${LOGIN_EMAIL_STRAPI}
     Wait And Click Element   ${LOGIN_STRAPI.CONFIRMLOGIN.BTN}
-    Check Error Message     ${LOGIN_STRAPI.REQUIREDPASSWORD.MSG}    ${REQUIRED_PASSWORD_STRAPI}
+    ${status}   ${value}=   Run Keyword And Ignore Error    Check Error Message     ${LOGIN_STRAPI.REQUIREDPASSWORD.MSG}    ${REQUIRED_PASSWORD_STRAPI}
+    Run Keyword If  '${status}' == 'FAIL'   Check Error Message     ${LOGIN_STRAPI.REQUIREDPASSWORD.MSG}    ${REQUIRED_THAI_STRAPI}
     [Teardown]          Clear Input 
 
 Login_004
@@ -37,15 +38,18 @@ Login_004
     [Tags]              login
     Wait And Fill Text      ${LOGIN_STRAPI.PASSWORD.FIELD}   ${LOGIN_PASSWORD_STRAPI}
     Wait And Click Element   ${LOGIN_STRAPI.CONFIRMLOGIN.BTN}
-    Check Error Message     ${LOGIN_STRAPI.REQUIREDEMAIL.MSG}   ${REQUIRED_EMAIL_STRAPI}
+    ${status}   ${value}=   Run Keyword And Ignore Error    Check Error Message     ${LOGIN_STRAPI.REQUIREDEMAIL.MSG}    ${REQUIRED_EMAIL_STRAPI}
+    Run Keyword If  '${status}' == 'FAIL'   Check Error Message     ${LOGIN_STRAPI.REQUIREDEMAIL.MSG}    ${REQUIRED_THAI_STRAPI}
     [Teardown]          Clear Input 
 
 Login_005
     [Documentation]     Not Filled Both Email And Password
     [Tags]              login
     Wait And Click Element   ${LOGIN_STRAPI.CONFIRMLOGIN.BTN}
-    Check Error Message     ${LOGIN_STRAPI.REQUIREDEMAIL.MSG}   ${REQUIRED_EMAIL_STRAPI}
-    Check Error Message     ${LOGIN_STRAPI.REQUIREDPASSWORD.MSG}    ${REQUIRED_EMAIL_STRAPI}
+    ${status}   ${value}=   Run Keyword And Ignore Error    Check Error Message     ${LOGIN_STRAPI.REQUIREDEMAIL.MSG}    ${REQUIRED_EMAIL_STRAPI}
+    Run Keyword If  '${status}' == 'FAIL'   Check Error Message     ${LOGIN_STRAPI.REQUIREDEMAIL.MSG}    ${REQUIRED_THAI_STRAPI}
+    ${status}   ${value}=   Run Keyword And Ignore Error    Check Error Message     ${LOGIN_STRAPI.REQUIREDPASSWORD.MSG}    ${REQUIRED_PASSWORD_STRAPI}
+    Run Keyword If  '${status}' == 'FAIL'   Check Error Message     ${LOGIN_STRAPI.REQUIREDPASSWORD.MSG}    ${REQUIRED_THAI_STRAPI}
     [Teardown]          Clear Input 
 
 Login_006
