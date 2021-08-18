@@ -1,6 +1,6 @@
 REQUIRED_PASSWORD_IPST: "กรุณากรอกรหัสผ่าน"
 REQUIRED_EMAIL_IPST: "กรุณากรอกอีเมล"
 ERROR_LOGIN_IPST: "อีเมลหรือรหัสผ่านไม่ถูกต้อง กรุณากรอกใหม่"
-FAILED_LOGIN_STRAPI: "Invalid credentials "
+FAILED_LOGIN_STRAPI: "Invalid credentials"
 REQUIRED_PASSWORD_STRAPI: "This value is required"
 REQUIRED_EMAIL_STRAPI: "This value is required"
