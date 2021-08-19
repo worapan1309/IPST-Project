@@ -13,6 +13,11 @@ ${FIREFOX_DRIVER_PATH_WIN}     ${EXECDIR}${/}drivers${/}firefox${/}window${/}gec
 ${OS}                          WIN
 
 *** Keywords ***
+Open Browser And Login: Strapi
+    [Arguments]     ${browser}
+    Open Browser And Go To URL      ${browser}      ${URL_STRAPI}
+    Login: Strapi Website    ${LOGIN_EMAIL_STRAPI}  ${LOGIN_PASSWORD_STRAPI}
+
 Open Safari Browser
     [Arguments]    ${url}
     [Documentation]    How to setup Browser Safari

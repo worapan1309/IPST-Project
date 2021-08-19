@@ -1,0 +1,32 @@
+*** Settings ***
+Variables         ${EXECDIR}${/}TestData${/}environment.yaml
+
+*** Variables ***
+${MEDIAITEM_DETAIL.MEDIAITEM.MENU}  xPath=//span[@class="sc-hYAvag jfgTmU" and contains(text(), 'MediaItems')]
+${MEDIAITEM_DETAIL.ADDMEDIA.BTN}  xPath=//button[@class="sc-dlfnbm loMFwz"]
+${MEDIAITEM_DETAIL.SLUG.FIELD}    xPath=//input[@name="slug"]
+${MEDIAITEM_DETAIL.TITLE.FIELD}    xPath=//input[@name="title"]
+${MEDIAITEM_DETAIL.DESCRIPTION.FIELD}    xPath=//input[@class="editorInput"]
+${MEDIAITEM_DETAIL.SEO_DESCRIPTION.FIELD}    xPath=//textarea[@name="seoDescription"]
+${MEDIAITEM_DETAIL.SUBJECT.DROPDOWN}    xPath=//select[@name="subject"]
+${MEDIAITEM_DETAIL.EDUCATION_LEVEL.DROPDOWN}    xPath=//select[@name="educationLevel"]
+${MEDIAITEM_DETAIL.CATEGORY.DROPDOWN}    xPath=//select[@name="category"]
+${MEDIAITEM_DETAIL.COVERIMAGE.SELECT}   xPath=//div[@class="sc-cZHnwi jxfNpE"]
+${MEDIAITEM_DETAIL.SELECTED.IMG}   xPath=(//div[@class="sc-ksSWxP hBuYJf"])[1]
+${MEDIAITEM_DETAIL.FINISH.BTN}    xPath=//button[@class="sc-dlfnbm cDlQQu" and @type="button"]
+${MEDIAITEM_DETAIL.METADATA.FIELD}    xPath=//input[@name="metadata"]
+${MEDIAITEM_DETAIL.PREVIEW_TYPE.DROPDOWN}    xPath=//select[@name="previewType"]
+${MEDIAITEM_DETAIL.PREVIEW_URL.FIELD}    xPath=//input[@name="previewURL"]
+${MEDIAITEM_DETAIL.DOWNLOAD_URL.FIELD}    xPath=//input[@name="downloadURL"]
+${MEDIAITEM_DETAIL.EMBEDED_CODE.FIELD}    xPath=//textarea[@name="embeddedCode"]
+${MEDIAITEM_DETAIL.SAVE.BTN}  xPath=//button[@class="sc-dlfnbm cDlQQu" and @type="submit"]
+${MEDIAITEM_DETAIL.PUBLISH.BTN}    xPath=//button[@class="sc-dlfnbm loMFwz"]
+${MEDIAITEM_DETAIL.BACK.BTN}    xPath=//div[@class="sc-laRPJI eNpfYQ"]
+${MEDIAITEM_DETAIL.ID.SORT}    xPath=(//span[@class="sortable"])[1]
+
+${MEDIAITEM_DETAIL.LASTESTITEM_VDO.ITEM}    xPath=//p[@class="sc-jMlkEa fmBJFo"]//span[contains(text(),"${TITLE_MEDIA_VDO}")]
+${MEDIAITEM_DETAIL.LASTESTITEM_PDF.ITEM}    xPath=//p[@class="sc-jMlkEa fmBJFo"]//span[contains(text(),"${TITLE_MEDIA_PDF}")]
+${MEDIAITEM_DETAIL.LASTESTITEM_EXERCISE.ITEM}    xPath=//p[@class="sc-jMlkEa fmBJFo"]//span[contains(text(),"${TITLE_MEDIA_EXERCISE}")]
+
+${MEDIAITEM_DETAIL.DELETE.BTN}      xPath=//div[@class="sc-lcTPrS sc-lnnytw damQna bCARSy"]
+${MEDIAITEM_DETAIL.CONFIRM_DELETE.BTN}      xPath=//button[@class="sc-dlfnbm cMRVOr"]
