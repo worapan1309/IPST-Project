@@ -12,7 +12,8 @@ Test Setup      Open Browser And Go To URL      Safari      ${URL_IPST}
 Test Teardown   Close Browser
 
 *** Test Cases ***
-My_Media_001 
+My_Media_001
+    [Documentation]      Add Media Type: Video 
     Login: IPST Website    ${LOGIN_EMAIL_STUDENT}  ${LOGIN_PASSWORD_STUDENT}
     Open Media       ${URL_VDO}     
     Add Media
@@ -21,6 +22,7 @@ My_Media_001
     Delete Media 
 
 My_Media_002
+    [Documentation]      Add Media Type: Power Point
     Login: IPST Website    ${LOGIN_EMAIL_STUDENT}  ${LOGIN_PASSWORD_STUDENT}
     Open Media       ${URL_PPT}     
     Add Media
@@ -29,6 +31,7 @@ My_Media_002
     Delete Media
 
 My_Media_003
+    [Documentation]      Add Media Type: Word
     Login: IPST Website    ${LOGIN_EMAIL_STUDENT}  ${LOGIN_PASSWORD_STUDENT}
     Open Media       ${URL_WORD}     
     Add Media
@@ -37,6 +40,7 @@ My_Media_003
     Delete Media
 
 My_Media_004
+    [Documentation]     Add Media Type: PDF
     Login: IPST Website    ${LOGIN_EMAIL_STUDENT}  ${LOGIN_PASSWORD_STUDENT}
     Open Media       ${URL_PDF}     
     Add Media
@@ -45,6 +49,7 @@ My_Media_004
     Delete Media
 
 My_Media_005
+    [Documentation]     Add Media Type: Exercise
     Login: IPST Website    ${LOGIN_EMAIL_STUDENT}  ${LOGIN_PASSWORD_STUDENT}
     Open Media       ${URL_EXERCISE}     
     Add Media
@@ -53,6 +58,7 @@ My_Media_005
     Delete Media
 
 My_Media_006
+    [Documentation]     Add Media Type: Other
     Login: IPST Website    ${LOGIN_EMAIL_STUDENT}  ${LOGIN_PASSWORD_STUDENT}
     Open Media       ${URL_OTHER}     
     Add Media
