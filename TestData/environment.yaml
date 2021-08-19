@@ -14,3 +14,10 @@ LOGIN_EMAIL_STRAPI: charinpat.p@gmail.com
 LOGIN_PASSWORD_STRAPI: Charinpat321
 WRONG_EMAIL_STRAPI: wrong_strapi@gmail.com
 WRONG_PASSWORD_STRAPI: WrongStrapi321
+
+
+SLUG_BASKET_STRAPI:  Computer-M5-Test
+TITLE_BASKET_STRAPI: เทคโนโลยี (วิทยาการคำนวณ) ชั้นมัธยมศึกษาปีที่ 5 (ทดสอบ)
+DESCRIPTION_BASKET_STRAPI: ลำดับการเรียนคือ บทที่ 6, 1, 2, 3, 4 และ 5 (เรียนบทที่ 6 ก่อนบทอื่น ๆ เพื่อให้นักเรียนรู้จักการใช้เทคโนโลยีอย่างมีความรับผิดชอบ เป็นพื้นฐานสำหรับการเรียนรู้ในเรื่องอื่น ๆ และในชีวิตประจำวัน)
+DOWNLOADURL_BASKET_STRAPI: https://ipst-hub.skooldio.com/medias/%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%84%E0%B8%A3%E0%B8%B9-%E0%B8%84%E0%B8%93%E0%B8%B4%E0%B8%95%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C-%E0%B9%80%E0%B8%9E%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B9%80%E0%B8%95%E0%B8%B4%E0%B8%A1-%E0%B8%A1.4-%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%A1-2
+PURCHASEURL_BASKET_STRAPI: https://www.chulabook.com/th/product-details/98218
