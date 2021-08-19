@@ -1,0 +1,20 @@
+*** Variables ***
+
+${BASKETS_DASHBOARD_STRAPI.ADDNEWBASKET.BUTTON}           //button[@class="sc-dlfnbm loMFwz"]
+${BASKETS_DASHBOARD_STRAPI.BASKETS.BUTTON}                (//span[@class="sc-hYAvag jfgTmU"])[1]
+${BASKETS_DASHBOARD_STRAPI.COPY.BUTTON}                   ((//div[@class="sc-dIUggk XavQL"])[1]/button)[1]
+${BASKETS_DASHBOARD_STRAPI.EDIT.BUTTON}                   ((//div[@class="sc-dIUggk XavQL"])[1]/button)[2]  
+${BASKETS_DASHBOARD_STRAPI.DELETE.BUTTON}                 ((//div[@class="sc-dIUggk XavQL"])[1]/button)[3]  
+
+${BASKET_DETAIL_STRAPI.PUBLISH.BUTTON}                    //button[@class="sc-dlfnbm loMFwz"]
+${BASKET_DETAIL_STRAPI.SAVE.BUTTON}                       //button[@class="sc-dlfnbm cDlQQu"]
+${BASKET_DETAIL_STRAPI.SLUG.INPUT}                        //input[@id="slug"]
+${BASKET_DETAIL_STRAPI.TITLE.INPUT}                       //input[@id="title"]
+${BASKET_DETAIL_STRAPI.SUBJECT.SELECT}                    //select[@id="subject"]
+${BASKET_DETAIL_STRAPI.EDULVL.SELECT}                     //select[@id="educationLevel"]
+${BASKET_DETAIL_STRAPI.DESCRIPTION.INPUT}                 //input[@class="editorInput"]
+${BASKET_DETAIL_STRAPI.COVERIMG.IMAGE}                    //div[@class="sc-jhlpgp kcOnZB"]
+${BASKET_DETAIL_STRAPI.TESTCOVERIMG.IMAGE}                //p[contains(text(), "ปก ทดสอบ (1).jpg")]
+${BASKET_DETAIL_STRAPI.FINISH.BUTTON}                     (//button[@class="sc-dlfnbm cDlQQu"])[2]
+${BASKET_DETAIL_STRAPI.DOWNLOADURL.INPUT}                 //input[@id="downloadURL"]
+${BASKET_DETAIL_STRAPI.PURCHASEURL.INPUT}                 //input[@id="purchaseURL"]
