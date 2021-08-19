@@ -1,6 +1,15 @@
 URL_IPST: http://202.139.199.68:3000/ 
 URL_STRAPI: http://202.139.199.68:1337/admin/auth/login
 
+URL_VDO:  http://202.139.199.68:3000/medias/M1-P1-%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%93%E0%B8%B0%E0%B8%97%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%84%E0%B8%9B%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%93%E0%B8%B0%E0%B9%80%E0%B8%89%E0%B8%9E%E0%B8%B2%E0%B8%B0.
+URL_PPT:  http://202.139.199.68:3000/medias/M1-Act2-PPT-%E0%B9%81%E0%B8%99%E0%B8%A7%E0%B8%84%E0%B8%B4%E0%B8%94%E0%B9%80%E0%B8%8A%E0%B8%B4%E0%B8%87%E0%B8%99%E0%B8%B2%E0%B8%A1%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1
+URL_WORD: http://202.139.199.68:3000/medias/M1-ACT-%E0%B8%84%E0%B8%B3%E0%B8%8A%E0%B8%B5%E0%B9%89%E0%B9%81%E0%B8%88%E0%B8%87
+URL_PDF:  http://202.139.199.68:3000/medias/M1-Act2-Pdf-%E0%B9%81%E0%B8%9C%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%AA%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%94%E0%B8%B4%E0%B8%99%E0%B8%A3%E0%B8%96
+URL_EXERCISE: http://202.139.199.68:3000/medias/m4b1_03_part1force_and_laws_of_motion_028_exercise
+URL_OTHER:  http://202.139.199.68:3000/medias/M1-Act3-Xls-%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B9%81%E0%B8%81%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B8%9C%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2%E0%B8%99_2
+
+URL_MYMEDIAMAIN: http://202.139.199.68:3000/medias/%E0%B8%97%E0%B8%94%E0%B8%AA%E0%B8%AD%E0%B8%9A_VE 
+
 LOGIN_EMAIL_TEACHER: teacher@gmail.com
 LOGIN_PASSWORD_TEACHER: 123456
 LOGIN_EMAIL_STUDENT: studentest@gmail.com
@@ -21,3 +30,50 @@ TITLE_BASKET_STRAPI: เทคโนโลยี (วิทยาการคำ
 DESCRIPTION_BASKET_STRAPI: ลำดับการเรียนคือ บทที่ 6, 1, 2, 3, 4 และ 5 (เรียนบทที่ 6 ก่อนบทอื่น ๆ เพื่อให้นักเรียนรู้จักการใช้เทคโนโลยีอย่างมีความรับผิดชอบ เป็นพื้นฐานสำหรับการเรียนรู้ในเรื่องอื่น ๆ และในชีวิตประจำวัน)
 DOWNLOADURL_BASKET_STRAPI: https://ipst-hub.skooldio.com/medias/%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%84%E0%B8%A3%E0%B8%B9-%E0%B8%84%E0%B8%93%E0%B8%B4%E0%B8%95%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C-%E0%B9%80%E0%B8%9E%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B9%80%E0%B8%95%E0%B8%B4%E0%B8%A1-%E0%B8%A1.4-%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%A1-2
 PURCHASEURL_BASKET_STRAPI: https://www.chulabook.com/th/product-details/98218
+# Add Media Item
+SLUG_MEDIA_VDO: M4EC_071_vdo-Test
+TITLE_MEDIA_VDO: (ทดสอบ) วีดิทัศน์บทที่ 6 เรื่องการใช้ประโยชน์จากข้อมูลของแผนที่
+DESCRIPTION_MEDIA_VDO: สื่อการเรียนรู้นี้เป็นสื่อประกอบในหนังสือเรียนรายวิชาเพิ่มเติมวิทยาศาสตร์และเทคโนโลยี
+SEO_DESCRIPTION_MEDIA_VDO: แผนที่ธรณีวิทยา, แผนที่ภูมิประเทศ
+SUBJECT_MEDIA_VDO: EARTH_SCIENCE
+EDUCATION_LEVEL_MEDIA_VDO: M4
+CATEGORY_MEDIA_VDO: VIDEO
+METADATA_MEDIA_VDO: 16.16
+PREVIEW_TYPE_MEDIA_VDO: RAW_IFRAME
+PREVIEW_URL_MEDIA_VDO: https://drive.google.com/uc?id=1csVAZWoVp9orR839vvHVDIdYYXocsGdt
+DOWNLOAD_URL_MEDIA_VDO: https://drive.google.com/u/0/uc?id=1csVAZWoVp9orR839vvHVDIdYYXocsGdt&export=download 
+EMBEDED_CODE_MEDIA_VDO: <iframe width="560" height="315" src="https://www.youtube.com/embed/nutbSXfo_IQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+SLUG_MEDIA_PDF:
+TITLE_MEDIA_PDF:
+DESCRIPTION_MEDIA_PDF:
+SEO_DESCRIPTION_MEDIA_PDF:
+SUBJECT_MEDIA_PDF:
+EDUCATION_LEVEL_MEDIA_PDF:
+CATEGORY_MEDIA_PDF:
+METADATA_MEDIA_PDF:
+PREVIEW_TYPE_MEDIA_PDF:
+PREVIEW_URL_MEDIA_PDF:
+DOWNLOAD_URL_MEDIA_PDF:
+EMBEDED_CODE_MEDIA_PDF:
+
+SLUG_MEDIA_EXERCISE:
+TITLE_MEDIA_EXERCISE:
+DESCRIPTION_MEDIA_EXERCISE:
+SEO_DESCRIPTION_MEDIA_EXERCISE:
+SUBJECT_MEDIA_EXERCISE:
+EDUCATION_LEVEL_MEDIA_EXERCISE:
+CATEGORY_MEDIA_EXERCISE:
+METADATA_MEDIA_EXERCISE:
+PREVIEW_MEDIA_TYPE_EXERCISE:
+PREVIEW_URL_MEDIA_EXERCISE:
+DOWNLOAD_URL_MEDIA_EXERCISE:
+EMBEDED_CODE_MEDIA_EXERCISE:
+
+VDO_NAME: ลักษณะทั่วไปและลักษณะเฉพาะ. 
+PPT_NAME: กิจกรรมที่ 2 แนวคิดเชิงนามธรรม (PPT)
+WORD_NAME:  คำชี้แจง
+PDF_NAME: กิจกรรมที่ 2 แผนที่เส้นทางเดินรถ
+EXERCISE_NAME:  แบบฝึกหัดท้ายบทที่-3-แรงและกฎการเคลื่อนที่
+OTHER_NAME: โปรแกรมเรียงผังงาน ด่าน 2 (xls)
+
