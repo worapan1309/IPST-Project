@@ -66,6 +66,7 @@ Open Browser And Go To URL
 Wait And Click Element
     [Arguments]     ${element}
     Wait Until Element Is Visible   ${element}      20s
+    Set Focus To Element    ${element}
     Click Element   ${element}
 
 Wait And Fill Text
