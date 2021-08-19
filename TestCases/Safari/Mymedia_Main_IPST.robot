@@ -7,14 +7,14 @@ Resource    ${EXECDIR}${/}Resources${/}Keywords${/}Pages${/}Login_IPST.resource
 Resource    ${EXECDIR}${/}Resources${/}Locator${/}Pages${/}Mymedia_Main_IPST.resource
 Resource    ${EXECDIR}${/}Resources${/}Keywords${/}Pages${/}Mymedia_Main_IPST.resource
 
-Test Setup       Open Browser And Go To URL      Chrome      ${URL_IPST}     
+Test Setup       Open Browser And Go To URL      Safari      ${URL_IPST}     
 Test Teardown    Close Browser
 
 *** Test Cases ***
 My_Media_Main_001
     [Documentation]     Add an existing file to the another folder
     Login : IPST Website    ${LOGIN_EMAIL_TEACHER}  ${LOGIN_PASSWORD_TEACHER}
-    Open Media       ${URL_MYMEDIAMAIN} 
+    Open Media       ${URL_MYMEDIAMAIN}  
     Add media           
 
 My_Media_Main_002
