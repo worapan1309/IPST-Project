@@ -27,8 +27,8 @@ My_Media_Main_003
     Login : IPST Website    ${LOGIN_EMAIL_TEACHER}  ${LOGIN_PASSWORD_TEACHER}
     Check media
     New folder
-    Wait And Fill Text               ${MYMEDIA_MAIN.NAMEFOLDER.FIELD}       ทดสอบ
-    Wait And Click Element           ${MYMEDIA_MAIN.CREATE.BTN} 
+    Create Folder
+    
 
 My_Media_Main_004
     [Documentation]     edit folder name in my media
@@ -49,16 +49,16 @@ My_Media_Main_006
     Login : IPST Website    ${LOGIN_EMAIL_TEACHER}  ${LOGIN_PASSWORD_TEACHER}
     Check media
     Three point
-    Wait And Click Element          ${MYMEDIA_MAIN.DELETE.BTN}  
-    Wait And Click Element          ${MYMEDIA_MAIN.CONFIRMDELETE.BTN}
+    Delete folder
+    
 
 My_Media_Main_007
     [Documentation]     add new folder, but doesn't name it in my media
     Login : IPST Website    ${LOGIN_EMAIL_TEACHER}  ${LOGIN_PASSWORD_TEACHER}
     Check media
     New folder
-    Wait And Click Element           ${MYMEDIA_MAIN.NOTFILLCREATE.BTN} 
-    Check Error Message              ${MYMEDIA_MAIN.ERROR.MSG}  ${ERROR_CEATEFOLDER_IPST}
+    Check Error
+    
 
 
 

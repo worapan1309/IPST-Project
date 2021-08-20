@@ -13,6 +13,9 @@ Check media
 New folder
     Wait And Click Element           ${MYMEDIA_MAIN.PLUSADD.BTN}
     
+Create Folder
+    Wait And Fill Text               ${MYMEDIA_MAIN.NAMEFOLDER.FIELD}       ทดสอบ
+    Wait And Click Element           ${MYMEDIA_MAIN.CREATE.BTN} 
 
 Three point
     Wait And Click Element           ${MYMEDIA_MAIN.THREEPOINT.BTN}
@@ -23,9 +26,19 @@ Edit folder
     Wait And Fill Text               ${MYMEDIA_MAIN.EDIT.FIELD}             แก้ไข
     Wait And Click Element           ${MYMEDIA_MAIN.SAVEEDIT.BTN}
     
+Delete folder
+    Wait And Click Element          ${MYMEDIA_MAIN.DELETE.BTN}  
+    Wait And Click Element          ${MYMEDIA_MAIN.CONFIRMDELETE.BTN}
+
 Open Media  
     [Arguments]     ${media}
     Go to       ${media}
+
+Check Error
+    Wait And Click Element           ${MYMEDIA_MAIN.NOTFILLCREATE.BTN} 
+    Check Error Message              ${MYMEDIA_MAIN.ERROR.MSG}  ${ERROR_CEATEFOLDER_IPST}
+
+
 
     
 
