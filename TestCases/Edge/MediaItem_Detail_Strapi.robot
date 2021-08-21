@@ -6,7 +6,7 @@ Resource          ${EXECDIR}${/}Resources${/}Keywords${/}Pages${/}Login_Strapi.r
 Resource          ${EXECDIR}${/}Resources${/}Keywords${/}Pages${/}MediaItem_Detail_Strapi.resource
 Resource          ${EXECDIR}${/}Resources${/}Locator${/}Pages${/}MediaItem_Detail_Strapi.resource
 
-Test Setup      Open Browser And Login: Strapi      Chrome
+Test Setup      Open Browser And Login: Strapi      Edge
 Test Teardown   Close Browser
 Suite Teardown  Close Browser
 

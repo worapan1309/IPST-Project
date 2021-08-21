@@ -30,6 +30,7 @@ TITLE_BASKET_STRAPI: เทคโนโลยี (วิทยาการคำ
 DESCRIPTION_BASKET_STRAPI: ลำดับการเรียนคือ บทที่ 6, 1, 2, 3, 4 และ 5 (เรียนบทที่ 6 ก่อนบทอื่น ๆ เพื่อให้นักเรียนรู้จักการใช้เทคโนโลยีอย่างมีความรับผิดชอบ เป็นพื้นฐานสำหรับการเรียนรู้ในเรื่องอื่น ๆ และในชีวิตประจำวัน)
 DOWNLOADURL_BASKET_STRAPI: https://ipst-hub.skooldio.com/medias/%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%84%E0%B8%A3%E0%B8%B9-%E0%B8%84%E0%B8%93%E0%B8%B4%E0%B8%95%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C-%E0%B9%80%E0%B8%9E%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B9%80%E0%B8%95%E0%B8%B4%E0%B8%A1-%E0%B8%A1.4-%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%A1-2
 PURCHASEURL_BASKET_STRAPI: https://www.chulabook.com/th/product-details/98218
+
 # Add Media Item
 SLUG_MEDIA_VDO: M4EC_071_vdo-Test
 TITLE_MEDIA_VDO: (ทดสอบ) วีดิทัศน์บทที่ 6 เรื่องการใช้ประโยชน์จากข้อมูลของแผนที่
@@ -44,30 +45,30 @@ PREVIEW_URL_MEDIA_VDO: https://drive.google.com/uc?id=1csVAZWoVp9orR839vvHVDIdYY
 DOWNLOAD_URL_MEDIA_VDO: https://drive.google.com/u/0/uc?id=1csVAZWoVp9orR839vvHVDIdYYXocsGdt&export=download 
 EMBEDED_CODE_MEDIA_VDO: <iframe width="560" height="315" src="https://www.youtube.com/embed/nutbSXfo_IQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-SLUG_MEDIA_PDF:
-TITLE_MEDIA_PDF:
-DESCRIPTION_MEDIA_PDF:
-SEO_DESCRIPTION_MEDIA_PDF:
-SUBJECT_MEDIA_PDF:
-EDUCATION_LEVEL_MEDIA_PDF:
-CATEGORY_MEDIA_PDF:
-METADATA_MEDIA_PDF:
-PREVIEW_TYPE_MEDIA_PDF:
-PREVIEW_URL_MEDIA_PDF:
-DOWNLOAD_URL_MEDIA_PDF:
+SLUG_MEDIA_PDF: m6_22_5behavior_TEST
+TITLE_MEDIA_PDF: (ทดสอบ) การสื่อสารระหว่างสัตว์
+DESCRIPTION_MEDIA_PDF: สื่อ PowerPoint เกี่ยวกับการสื่อสารระหว่างสัตว์ที่ทำให้สัตว์แสดงพฤติกรรม 
+SEO_DESCRIPTION_MEDIA_PDF: การสื่อสารด้วยเสียง, auditory communication, การสื่อสารด้วยท่าทาง
+SUBJECT_MEDIA_PDF: BIOLOGY
+EDUCATION_LEVEL_MEDIA_PDF: M6
+CATEGORY_MEDIA_PDF: PDF
+METADATA_MEDIA_PDF: 24 หน้า
+PREVIEW_TYPE_MEDIA_PDF: PDF
+PREVIEW_URL_MEDIA_PDF: https://drive.google.com/uc?id=1UdrZm4U-XUuZmob8CvfLk-qe5M6NjzJo
+DOWNLOAD_URL_MEDIA_PDF: https://ipst-my.sharepoint.com/:p:/g/personal/lms_ipst_ac_th/EV1NNhePjjJNj-BzuCMa-okB7lNDfnCXxKiwchjpaDk3wQ?download=1
 EMBEDED_CODE_MEDIA_PDF:
 
-SLUG_MEDIA_EXERCISE:
-TITLE_MEDIA_EXERCISE:
-DESCRIPTION_MEDIA_EXERCISE:
-SEO_DESCRIPTION_MEDIA_EXERCISE:
-SUBJECT_MEDIA_EXERCISE:
-EDUCATION_LEVEL_MEDIA_EXERCISE:
-CATEGORY_MEDIA_EXERCISE:
-METADATA_MEDIA_EXERCISE:
-PREVIEW_MEDIA_TYPE_EXERCISE:
-PREVIEW_URL_MEDIA_EXERCISE:
-DOWNLOAD_URL_MEDIA_EXERCISE:
+SLUG_MEDIA_EXERCISE: m5b3_10_light_wave_TEST
+TITLE_MEDIA_EXERCISE: (ทดสอบ) แบบฝึกหัดท้ายบทที่-10
+DESCRIPTION_MEDIA_EXERCISE: แบบฝึกหัดท้ายบทที่ 10 แสงเชิงคลื่น วิชาฟิสิกส์ เพิ่มเติม เล่ม 3
+SEO_DESCRIPTION_MEDIA_EXERCISE: ฟิสิกส์, แสงเชิงคลื่น
+SUBJECT_MEDIA_EXERCISE: PHYSICS
+EDUCATION_LEVEL_MEDIA_EXERCISE: M5
+CATEGORY_MEDIA_EXERCISE: EXERCISE
+METADATA_MEDIA_EXERCISE: 7 ข้อ
+PREVIEW_TYPE_MEDIA_EXERCISE: IMAGE
+PREVIEW_URL_MEDIA_EXERCISE: https://drive.google.com/u/1/uc?id=1Isezop9Hb59wbj4aTxK9h6S-avSogUI2&export=download
+DOWNLOAD_URL_MEDIA_EXERCISE: https://drive.google.com/u/1/uc?id=1Isezop9Hb59wbj4aTxK9h6S-avSogUI2&export=download
 EMBEDED_CODE_MEDIA_EXERCISE:
 
 VDO_NAME: ลักษณะทั่วไปและลักษณะเฉพาะ. 
