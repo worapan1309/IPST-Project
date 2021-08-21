@@ -1,5 +1,6 @@
 *** Settings ***
 Library         SeleniumLibrary
+Library         String
 Variables       ${EXECDIR}${/}TestData${/}environment.yaml
 Resource        ${EXECDIR}${/}Resources${/}Keywords${/}Pages${/}Common.resource
 Resource        ${EXECDIR}${/}Resources${/}Locator${/}Pages${/}MediaItem_Detail_Strapi.resource
@@ -31,6 +32,7 @@ Add Media Item Except
     [Arguments]     ${type}     ${except}=None
     ${args}=    Copy LIST   ${LIST_FIELDS}
     Remove Values From List     ${args}     ${except}
+    ${CHECK_CONDITION}=     Set Variable    '${except}'=='slug' or '${except}'=='title' or '${except}'=='sub' or '${except}'=='edLV' or '${except}'=='cat' or '${except}'=='img' or '${except}'=='preType' or '${except}'=='preURL' or '${except}'=='download'
     Wait And Click Element  ${MEDIAITEM_DETAIL.MEDIAITEM.MENU}
     Wait And Click Element  ${MEDIAITEM_DETAIL.ADDMEDIA.BTN}
 
@@ -53,18 +55,27 @@ Add Media Item Except
     Set Focus To Element    ${MEDIAITEM_DETAIL.SAVE.BTN}
     Wait And Click Element  ${MEDIAITEM_DETAIL.SAVE.BTN}
     Wait And Click Element  ${MEDIAITEM_DETAIL.PUBLISH.BTN}
+    ${var_name}=    Convert To Upper Case       ${except}
+
+    Run Keyword If  ${CHECK_CONDITION}
+    ...     Element Should Be Visible   ${MEDIAITEM_DETAIL.ERROR_${var_name}.MSG} 
+    
     Remove Media    ${type}
 
 Remove Media
     [Arguments]     ${type}
     Wait And Click Element  ${MEDIAITEM_DETAIL.BACK.BTN}
     Sort By ID: Descending order
-    Wait And Click Element  ${MEDIAITEM_DETAIL.LASTESTITEM_${type}.ITEM}
+    
+    ${status}   ${value}=   Run Keyword And Ignore Error    Wait And Click Element  ${MEDIAITEM_DETAIL.LASTESTITEM_${type}.ITEM}
+    Run Keyword If  '${status}' == 'FAIL'   Wait And Click Element  ${MEDIAITEM_DETAIL.LASTESTITEM_${type}_FIND_SLUG.ITEM}
+    
     Clear Manual Popup
     Wait And Click Element  ${MEDIAITEM_DETAIL.DELETE.BTN}
     Wait And Click Element  ${MEDIAITEM_DETAIL.CONFIRM_DELETE.BTN}
 
 Teardown For Failed
-    [Arguments]     ${type}
+    [Arguments]     ${type}     ${attribute}
     Remove Media    ${type}
+    Fail    '${attribute}' field needs to be filled information, but it can be published even the field is empty.
     Close Browser
