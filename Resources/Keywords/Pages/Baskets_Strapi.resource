@@ -1,5 +1,6 @@
 *** Settings ***
 Library         SeleniumLibrary
+Library         String
 Variables       ${EXECDIR}${/}TestData${/}environment.yaml
 Resource        ${EXECDIR}${/}Resources${/}Keywords${/}Pages${/}Common.resource
 Resource        ${EXECDIR}${/}Resources${/}Locator${/}Pages${/}Baskets_Strapi.resource
@@ -8,8 +9,6 @@ Resource        ${EXECDIR}${/}Resources${/}Locator${/}Pages${/}Baskets_Strapi.re
 @{LIST_FIELDS}=     slug    title   sub     edulvl    des   coverimg    downloadurl    purchaseurl
 
 *** Keywords ***
-
-
 Add Basket Except
     [Arguments]     ${except}=None
     ${args}=    Copy LIST   ${LIST_FIELDS}
@@ -55,10 +54,10 @@ Input Basket Title
     Wait And Fill Text          ${BASKET_DETAIL_STRAPI.TITLE.INPUT}                     ${TITLE_BASKET_STRAPI}        
     
 Select Subject    
-    Select From List By Value   ${BASKET_DETAIL_STRAPI.SUBJECT.SELECT}                  COMPUTING_SCIENCE 
+    Select From List By Value   ${BASKET_DETAIL_STRAPI.SUBJECT.SELECT}                  ${SUBJECT_BASKET_STRAPI} 
 
 Select Education Level
-    Select From List By Value   ${BASKET_DETAIL_STRAPI.EDULVL.SELECT}                   M5    
+    Select From List By Value   ${BASKET_DETAIL_STRAPI.EDULVL.SELECT}                   ${EDULVL_BASKET_STRAPI}   
 
 Input Description 
     Wait And Click Element      ${BASKET_DETAIL_STRAPI.DESCRIPTION.INPUT}
@@ -93,7 +92,7 @@ Back To Basket Dashboard
 Duplicate Basket  
     Sort Baskets By ID: Descending order  
     Wait And Click Element      ${BASKETS_DASHBOARD_STRAPI.COPY.BUTTON}
-    Wait And Fill Text          ${BASKET_DETAIL_STRAPI.SLUG.INPUT}                       Computer-M5-Test-Duplicate
+    Wait And Fill Text          ${BASKET_DETAIL_STRAPI.SLUG.INPUT}                       ${SLUGDUPLICATE_BASKET_STRAPI}
     Save New Basket  
     Publish New Basket 
 
@@ -102,7 +101,7 @@ Edit Basket
     Wait And Click Element      ${BASKETS_DASHBOARD_STRAPI.EDIT.BUTTON} 
     Unpublish Basket
     sleep   1s
-    Wait And Fill Text          ${BASKET_DETAIL_STRAPI.SLUG.INPUT}                       Computer-M5-Test-Edit
+    Wait And Fill Text          ${BASKET_DETAIL_STRAPI.SLUG.INPUT}                       ${SLUGEDIT_BASKET_STRAPI}
     sleep   1s
     Save New Basket  
     sleep   1s
