@@ -5,8 +5,13 @@ ${BASKETS_DASHBOARD_STRAPI.BASKETS.BUTTON}                (//span[@class="sc-hYA
 ${BASKETS_DASHBOARD_STRAPI.COPY.BUTTON}                   ((//div[@class="sc-dIUggk XavQL"])[1]/button)[1]
 ${BASKETS_DASHBOARD_STRAPI.EDIT.BUTTON}                   ((//div[@class="sc-dIUggk XavQL"])[1]/button)[2]  
 ${BASKETS_DASHBOARD_STRAPI.DELETE.BUTTON}                 ((//div[@class="sc-dIUggk XavQL"])[1]/button)[3]  
+${BASKETS_DASHBOARD_STRAPI.COMFIRMDELETE.BUTTON}          //button[@class="sc-dlfnbm cMRVOr"]  
+${BASKETS_DASHBOARD_STRAPI.ID.SORT}                       (//span[@class="sortable"])[1]  
 
+${BASKET_DETAIL_STRAPI.BACK.BUTTON}                       //div[@class="sc-laRPJI eNpfYQ"]  
 ${BASKET_DETAIL_STRAPI.PUBLISH.BUTTON}                    //button[@class="sc-dlfnbm loMFwz"]
+${BASKET_DETAIL_STRAPI.UNPUBLISH.BUTTON}                  //button[contains(text(), "Unpublish")]
+${BASKET_DETAIL_STRAPI.CONFIRMUNPUBLISH.BUTTON}           //button[@class="sc-dlfnbm cMRVOr"] 
 ${BASKET_DETAIL_STRAPI.SAVE.BUTTON}                       //button[@class="sc-dlfnbm cDlQQu"]
 ${BASKET_DETAIL_STRAPI.SLUG.INPUT}                        //input[@id="slug"]
 ${BASKET_DETAIL_STRAPI.TITLE.INPUT}                       //input[@id="title"]
@@ -18,3 +23,5 @@ ${BASKET_DETAIL_STRAPI.TESTCOVERIMG.IMAGE}                //p[contains(text(), "
 ${BASKET_DETAIL_STRAPI.FINISH.BUTTON}                     (//button[@class="sc-dlfnbm cDlQQu"])[2]
 ${BASKET_DETAIL_STRAPI.DOWNLOADURL.INPUT}                 //input[@id="downloadURL"]
 ${BASKET_DETAIL_STRAPI.PURCHASEURL.INPUT}                 //input[@id="purchaseURL"]
+
+

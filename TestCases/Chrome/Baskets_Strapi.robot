@@ -7,7 +7,7 @@ Resource          ${EXECDIR}${/}Resources${/}Locator${/}Pages${/}Baskets_Strapi.
 Resource          ${EXECDIR}${/}Resources${/}Keywords${/}Pages${/}Login_Strapi.resource
 
 Force Tags       baskets_strapi_mac 
-Suite Setup      Open Browser And Go To URL      Chrome      ${URL_STRAPI}     
+Suite Setup      Open Browser And Login: Strapi      Chrome     
 #Suite Teardown   Close Browser
 
 
@@ -15,17 +15,74 @@ Suite Setup      Open Browser And Go To URL      Chrome      ${URL_STRAPI}
 Baskets_001
     [Documentation]     สร้างสื่อกระเช้าการสอนกรอกข้อมูลครบถ้วน
     [Tags]              addbaskets
-    Login: Strapi Website    ${LOGIN_EMAIL_STRAPI}  ${LOGIN_PASSWORD_STRAPI}
-    Go to Baskets
-    Click Add new Basket
-    Input Basket Slug                 
-    Input Baskets Title  
-    Select Subject    
-    Select Education Level
-    Input Description    
-    Upload Cover Image           
-    Input Download URL 
-    Input Purchase URL  
-    Save New Basket  
-    Publish New Basket      
+    Add Basket Except   None
+    Back To Basket Dashboard
+    Remove Basket 
+
+Baskets_003
+    [Documentation]     ไม่กรอกข้อมูลช่อง Slug
+    [Tags]              addbaskets
+    Add Basket Except   slug
+    Back To Basket Dashboard
+    Remove Basket 
         
+Baskets_004
+    [Documentation]     ไม่กรอกข้อมูลช่อง Title
+    [Tags]              addbaskets                
+    Add Basket Except   title
+    Back To Basket Dashboard
+    Remove Basket
+
+Baskets_005
+    [Documentation]     ไม่กรอกข้อมูลช่อง Subject
+    [Tags]              addbaskets
+    Add Basket Except   sub  
+    Back To Basket Dashboard 
+    Remove Basket
+
+Baskets_006
+    [Documentation]     ไม่กรอกข้อมูลช่อง Education Level
+    [Tags]              addbaskets
+    Add Basket Except   edulvl  
+    Back To Basket Dashboard 
+    Remove Basket
+
+Baskets_007    
+    [Documentation]     ไม่กรอกข้อมูลช่อง Cover Image
+    [Tags]              addbaskets
+    Add Basket Except   coverimg
+    Back To Basket Dashboard
+    Remove Basket
+
+Baskets_008    
+    [Documentation]     ไม่กรอกข้อมูลช่อง Purchase URL
+    [Tags]              addbaskets
+    Add Basket Except   purchaseurl
+    Back To Basket Dashboard
+    Remove Basket
+
+Baskets_009
+    [Documentation]     คัดลอกกระเช้าการสอน
+    [Tags]              addbaskets
+    Add Basket Except   None
+    Back To Basket Dashboard
+    Duplicate Basket
+    Back To Basket Dashboard
+    Remove Basket
+    Remove Basket
+
+Baskets_010
+    [Documentation]     แก้ไขกระเช้าการสอน
+    [Tags]              addbaskets
+    Add Basket Except   None
+    Back To Basket Dashboard
+    Edit Basket
+    Back To Basket Dashboard
+    Remove Basket
+
+Baskets_011
+    [Documentation]     ลบกระเช้าการสอน
+    [Tags]              addbaskets    
+    Add Basket Except   None
+    Back To Basket Dashboard
+    Remove Basket
