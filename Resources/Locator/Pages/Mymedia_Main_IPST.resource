@@ -1,7 +1,5 @@
 *** Variables ***
-# ${MYMEDIA_MAIN.TOPIC.BTN}               xPath=//p[@class="chakra-text css-3577hl" and contains(text(),'ความสัมพันธ์')]
-# ${MYMEDIA_MAIN.TOPICLIST.MENU}          xPath=//div[@id="accordion-panel-section-0"]
-# ${MYMEDIA_MAIN.MEDIA.BTN}               xPath=//p[@class="chakra-text css-zu1swq" and contains(text(),'ความสัมพันธ์')]
+
 
 ${MYMEDIA_MAIN.ADDMYMEDIA.BTN}                xPath=//button[@class="chakra-button css-7ohbpx"]
 ${MYMEDIA_MAIN.ADD.BTN}                       xPath=//div[@class="chakra-checkbox__label css-1lla3jy" and contains (text(),'เก็บไว้ดู')]
@@ -18,5 +16,12 @@ ${MYMEDIA_MAIN.COPY.BTN}                      xPath=(//button[@class="chakra-men
 ${MYMEDIA_MAIN.DELETE.BTN}                    xPath=(//button[@class="chakra-menu__menuitem css-12fckhw"])[2]
 ${MYMEDIA_MAIN.CONFIRMDELETE.BTN}             xPath=//button[@class="chakra-button css-218v91"]
 ${MYMEDIA_MAIN.ERROR.MSG}                     xPath=//div[@class="chakra-form__error-message css-zrexl5"]
-# ${MYMEDIA_MAIN.NAME.FIELD}                  xPath=//input[@id="field-1133"]
+${MYMEDIA_MAIN.MEDIA.BTN}                     xPath=//button[@class="chakra-menu__menu-button css-jgaxry"]
+${MYMEDIA_MAIN.DELETEMEDIA.BTN}               xPath=//button[@class="chakra-menu__menuitem css-3xdaf3"]
+${MYMEDIA_MAIN.CONFIRM.BTN}                   xPath=//button[@class="chakra-button css-218v91"]
+${MYMEDIA_MAIN.CLOSEPOPUP.BTN}                xPath=//button[@class="chakra-button css-mn6snj"]
+${MYMEDIA_MAIN.NEWFOLDER.BTN}                 xPath=//button[@class="chakra-button css-cxt1dr"]
+${MYMEDIA_MAIN.INPUTNAME.FIELD}               xPath=//input[@class="chakra-input css-19lktsd"]
+${MYMEDIA_MAIN.CONFIRMCREATE.BTN}             xPath=//button[@class="chakra-button css-tuzhjl"]
+${MYMEDIA_MAIN.GOTOMYMEDIA.BTN}               xPath=//a[@class="chakra-link css-1urq7b4" and contains(text(),'สื่อของฉัน')]
 

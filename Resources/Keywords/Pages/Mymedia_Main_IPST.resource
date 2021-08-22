@@ -6,12 +6,27 @@ Resource        ${EXECDIR}${/}Resources${/}Locator${/}Pages${/}Mymedia_Main_IPST
 Add media
     Wait And Click Element           ${MYMEDIA_MAIN.ADDMYMEDIA.BTN}
     Wait And Click Element           ${MYMEDIA_MAIN.ADD.BTN} 
-      
-Check media
+
+Check Media
+    Wait And Click Element           ${MYMEDIA_MAIN.CLOSEPOPUP.BTN}
+    Wait And Click Element           ${MYMEDIA_MAIN.MYMEDIA.BTN}
+    Wait And Click Element           ${MYMEDIA_MAIN.MEDIA.BTN}
+    Wait And Click Element           ${MYMEDIA_MAIN.DELETEMEDIA.BTN}
+    Wait And Click Element           ${MYMEDIA_MAIN.CONFIRM.BTN}
+
+
+Go to my media
     Wait And Click Element           ${MYMEDIA_MAIN.MYMEDIA.BTN} 
    
 New folder
     Wait And Click Element           ${MYMEDIA_MAIN.PLUSADD.BTN}
+
+Create New Folder Add Media
+    Wait And Click Element           ${MYMEDIA_MAIN.ADDMYMEDIA.BTN} 
+    Wait And Click Element           ${MYMEDIA_MAIN.NEWFOLDER.BTN}
+    Wait And Fill Text               ${MYMEDIA_MAIN.INPUTNAME.FIELD}       ลองดู
+    Wait And Click Element           ${MYMEDIA_MAIN.CONFIRMCREATE.BTN}
+    Wait And Click Element           ${MYMEDIA_MAIN.GOTOMYMEDIA.BTN}
     
 Create Folder
     Wait And Fill Text               ${MYMEDIA_MAIN.NAMEFOLDER.FIELD}       ทดสอบ
