@@ -13,6 +13,7 @@ Add Basket Except
     [Arguments]     ${except}=None
     ${args}=    Copy LIST   ${LIST_FIELDS}
     Remove Values From List     ${args}     ${except}
+    ${CHECK_CONDITION}=     Set Variable    '${except}'=='slug' or '${except}'=='title' or '${except}'=='sub' or '${except}'=='edulvl' or '${except}'=='downloadurl'
     Go to Baskets
     Click Add new Basket
 
@@ -30,14 +31,16 @@ Add Basket Except
 
     Save New Basket  
     Publish New Basket 
+    ${var_name}=    Convert To Upper Case       ${except}
+
+    Run Keyword If  ${CHECK_CONDITION}  Run Keywords
+    ...     Element Should Be Visible   ${BASKET_DETAIL_STRAPI.ERROR_${var_name}.MSG}   AND     
+    ...     Capture Element Screenshot  ${BASKET_DETAIL_STRAPI.ERROR_${var_name}.MSG}
+
 
 Sort Baskets By ID: Descending order
     Wait And Click Element  ${BASKETS_DASHBOARD_STRAPI.ID.SORT} 
     Wait And Click Element  ${BASKETS_DASHBOARD_STRAPI.ID.SORT} 
-
-Teardown For Failed
-    Remove Basket   
-    Close Browser
 
 Go to Baskets
     Wait And Click Element      ${BASKETS_DASHBOARD_STRAPI.BASKETS.BUTTON}
@@ -112,5 +115,22 @@ Remove Basket
     Wait And Click Element  ${BASKETS_DASHBOARD_STRAPI.DELETE.BUTTON} 
     Wait And Click Element  ${BASKETS_DASHBOARD_STRAPI.COMFIRMDELETE.BUTTON} 
     
-     
-  
+Teardown For Failed
+    [Arguments]        ${attribute}
+    Back To Basket Dashboard
+    Remove Entry Basket   
+    Fail    '${attribute}' field needs to be filled information, but it can be published even the field is empty.
+    Close Browser
+
+Clear Manual Popup
+    Wait And Click Element  xPath=//button[@class="active"]
+
+Remove Entry Basket
+    Sort Baskets By ID: Descending order
+    
+    ${status}   ${value}=   Run Keyword And Ignore Error    Wait And Click Element  ${BASKET_DETAIL_STRAPI.LASTESTITEM.ITEM} 
+    Run Keyword If  '${status}' == 'FAIL'   Wait And Click Element  ${BASKET_DETAIL_STRAPI.LASTESTITEM_FIND_SLUG.ITEM} 
+    
+    Clear Manual Popup
+    Wait And Click Element  ${BASKET_DETAIL_STRAPI.ENTRYDELETE.BUTTON}  
+    Wait And Click Element  ${BASKET_DETAIL_STRAPI.ENTRYCONFIRMDELETE.BUTTON}   

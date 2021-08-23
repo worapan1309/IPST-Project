@@ -23,5 +23,14 @@ ${BASKET_DETAIL_STRAPI.TESTCOVERIMG.IMAGE}                //p[contains(text(), "
 ${BASKET_DETAIL_STRAPI.FINISH.BUTTON}                     (//button[@class="sc-dlfnbm cDlQQu"])[2]
 ${BASKET_DETAIL_STRAPI.DOWNLOADURL.INPUT}                 //input[@id="downloadURL"]
 ${BASKET_DETAIL_STRAPI.PURCHASEURL.INPUT}                 //input[@id="purchaseURL"]
-
-
+${BASKET_DETAIL_STRAPI.ENTRYDELETE.BUTTON}                //div[@class="sc-lcTPrS sc-lnnytw damQna bCARSy"]
+${BASKET_DETAIL_STRAPI.ENTRYCONFIRMDELETE.BUTTON}         //button[@class="sc-dlfnbm cMRVOr"]  
+${BASKET_DETAIL_STRAPI.LASTESTITEM.ITEM}                  (//tr[@class="sc-cRoahL fjuCED"])[1]  
+${BASKET_DETAIL_STRAPI.LASTESTITEM_FIND_SLUG.ITEM}        //p[@class="sc-jMlkEa fmBJFo"]//span[contains(text(),"${SLUG_BASKET_STRAPI}")]
+${BASKET_DETAIL_STRAPI.ERROR_SLUG.MSG}                    //p[@class="sc-kEjbxe jbJDWL" and @id="error-slug"]
+${BASKET_DETAIL_STRAPI.ERROR_TITLE.MSG}                   //p[@class="sc-kEjbxe jbJDWL" and @id="error-title"]
+${BASKET_DETAIL_STRAPI.ERROR_SUB.MSG}                     //p[@class="sc-kEjbxe jbJDWL" and @id="error-subject"] 
+${BASKET_DETAIL_STRAPI.ERROR_EDULVL.MSG}                  //p[@class="sc-kEjbxe jbJDWL" and @id="error-educationLevel"]                      
+${BASKET_DETAIL_STRAPI.ERROR_COVERIMG.MSG}                //p[@class="sc-kEjbxe jbJDWL" and @id="error-coverImage"]  
+${BASKET_DETAIL_STRAPI.ERROR_DOWNLOADURL.MSG}             //p[@class="sc-kEjbxe jbJDWL" and @id="error-downloadURL"]  
+${BASKET_DETAIL_STRAPI.ERROR_PURCHASEURL.MSG}             //p[@class="sc-kEjbxe jbJDWL" and @id="error-purchaseURL"]  
