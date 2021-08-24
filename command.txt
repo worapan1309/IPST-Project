@@ -10,17 +10,17 @@ robot TestCases/Firefox/Login_IPST.robot
 
 robot TestCases/Chrome/Login_Strapi.robot 
 
-robot TestCases/Edge/Login_ Strapi.robot 
+robot TestCases/Edge/Login_Strapi.robot 
 
-robot TestCases/Firefox/Login_ Strapi.robot 
+robot TestCases/Firefox/Login_Strapi.robot 
 
  
 
 robot TestCases/Chrome/Baskets_Strapi.robot 
 
-robot TestCases/Edge/Baskets_ Strapi.robot 
+robot TestCases/Edge/Baskets_Strapi.robot 
 
-robot TestCases/Firefox/Baskets_ Strapi.robot 
+robot TestCases/Firefox/Baskets_Strapi.robot 
 
  
 
@@ -70,21 +70,21 @@ robot -v OS:MAC TestCases/Safari/Login_IPST.robot
 
 robot -v OS:MAC TestCases/Chrome/Login_Strapi.robot 
 
-robot -v OS:MAC TestCases/Edge/Login_ Strapi.robot 
+robot -v OS:MAC TestCases/Edge/Login_Strapi.robot 
 
-robot -v OS:MAC TestCases/Firefox/Login_ Strapi.robot 
+robot -v OS:MAC TestCases/Firefox/Login_Strapi.robot 
 
-robot -v OS:MAC TestCases/Safari/Login_ Strapi.robot 
+robot -v OS:MAC TestCases/Safari/Login_Strapi.robot 
 
  
 
 robot -v OS:MAC TestCases/Chrome/Baskets_Strapi.robot 
 
-robot -v OS:MAC TestCases/Edge/Baskets_ Strapi.robot 
+robot -v OS:MAC TestCases/Edge/Baskets_Strapi.robot 
 
-robot -v OS:MAC TestCases/Firefox/Baskets_ Strapi.robot 
+robot -v OS:MAC TestCases/Firefox/Baskets_Strapi.robot 
 
-robot -v OS:MAC TestCases/Safari/Baskets_ Strapi.robot 
+robot -v OS:MAC TestCases/Safari/Baskets_Strapi.robot 
 
  
 
