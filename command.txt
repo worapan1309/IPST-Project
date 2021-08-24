@@ -1,0 +1,133 @@
+** Command Window **
+
+robot TestCases/Chrome/Login_IPST.robot 
+
+robot TestCases/Edge/ Login_IPST.robot 
+
+robot TestCases/Firefox/ Login_IPST.robot 
+
+
+
+robot TestCases/Chrome/ Login_Strapi.robot 
+
+robot TestCases/Edge/ Login_ Strapi.robot 
+
+robot TestCases/Firefox/ Login_ Strapi.robot 
+
+ 
+
+robot TestCases/Chrome/Baskets_Strapi.robot 
+
+robot TestCases/Edge/ Baskets_ Strapi.robot 
+
+robot TestCases/Firefox/ Baskets_ Strapi.robot 
+
+ 
+
+robot TestCases/Chrome/MediaItem_Detail_Strapi.robot 
+
+robot TestCases/Edge/MediaItem_Detail_Strapi.robot 
+
+robot TestCases/Firefox/MediaItem_Detail_Strapi.robot 
+
+
+
+robot TestCases/Chrome/ MediaItems_Dashboard_Strapi.robot 
+
+robot TestCases/Edge/ MediaItems_Dashboard_Strapi.robot 
+
+robot TestCases/Firefox/ MediaItems_Dashboard_Strapi.robot 
+
+
+
+robot TestCases/Chrome/MyMedia_IPST.robot 
+
+robot TestCases/Edge/MyMedia_IPST.robot 
+
+robot TestCases/Firefox/MyMedia_IPST.robot 
+
+
+
+robot TestCases/Chrome/Mymedia_Main_IPST.robot 
+
+robot TestCases/Edge/Mymedia_Main_IPST.robot 
+
+robot TestCases/Firefox/Mymedia_Main_IPST.robot 
+ 
+
+
+** Command Mac **
+
+robot –v OS:MAC TestCases/Chrome/Login_IPST.robot 
+
+robot –v OS:MAC TestCases/Edge/ Login_IPST.robot 
+
+robot –v OS:MAC TestCases/Firefox/ Login_IPST.robot 
+
+robot –v OS:MAC TestCases/Safari/ Login_IPST.robot 
+
+ 
+
+robot –v OS:MAC TestCases/Chrome/ Login_Strapi.robot 
+
+robot –v OS:MAC TestCases/Edge/ Login_ Strapi.robot 
+
+robot –v OS:MAC TestCases/Firefox/ Login_ Strapi.robot 
+
+robot –v OS:MAC TestCases/Safari/ Login_ Strapi.robot 
+
+ 
+
+robot –v OS:MAC TestCases/Chrome/Baskets_Strapi.robot 
+
+robot –v OS:MAC TestCases/Edge/ Baskets_ Strapi.robot 
+
+robot –v OS:MAC TestCases/Firefox/ Baskets_ Strapi.robot 
+
+robot –v OS:MAC TestCases/Safari/ Baskets_ Strapi.robot 
+
+ 
+
+robot –v OS:MAC TestCases/Chrome/MediaItem_Detail_Strapi.robot 
+
+robot –v OS:MAC TestCases/Edge/MediaItem_Detail_Strapi.robot 
+
+robot –v OS:MAC TestCases/Firefox/MediaItem_Detail_Strapi.robot 
+
+robot –v OS:MAC TestCases/Safari/MediaItem_Detail_Strapi.robot 
+
+ 
+
+robot –v OS:MAC TestCases/Chrome/ MediaItems_Dashboard_Strapi.robot 
+
+robot –v OS:MAC TestCases/Edge/ MediaItems_Dashboard_Strapi.robot 
+
+robot –v OS:MAC TestCases/Firefox/ MediaItems_Dashboard_Strapi.robot 
+
+robot –v OS:MAC TestCases/Safari/ MediaItems_Dashboard_Strapi.robot 
+
+ 
+
+robot –v OS:MAC TestCases/Chrome/MyMedia_IPST.robot 
+
+robot –v OS:MAC TestCases/Edge/MyMedia_IPST.robot 
+
+robot –v OS:MAC TestCases/Firefox/MyMedia_IPST.robot 
+
+robot –v OS:MAC TestCases/Safari/MyMedia_IPST.robot 
+
+ 
+
+robot –v OS:MAC TestCases/Chrome/Mymedia_Main_IPST.robot 
+
+robot –v OS:MAC TestCases/Edge/Mymedia_Main_IPST.robot 
+
+robot –v OS:MAC TestCases/Firefox/Mymedia_Main_IPST.robot 
+
+robot –v OS:MAC TestCases/Safari/Mymedia_Main_IPST.robot 
+
+ 
+
+ 
+
+ 
