@@ -53,6 +53,7 @@ Add Media Item Except
     END
 
     Set Focus To Element    ${MEDIAITEM_DETAIL.SAVE.BTN}
+    Press Keys      ${None}     HOME
     Wait And Click Element  ${MEDIAITEM_DETAIL.SAVE.BTN}
     Wait And Click Element  ${MEDIAITEM_DETAIL.PUBLISH.BTN}
     ${var_name}=    Convert To Upper Case       ${except}

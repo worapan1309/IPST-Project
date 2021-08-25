@@ -38,7 +38,7 @@ PURCHASEURL_BASKET_STRAPI: https://www.chulabook.com/th/product-details/98218
 
 # Add Media Item
 SLUG_MEDIA_VDO: M4EC_071_vdo-Test
-TITLE_MEDIA_VDO: (ทดสอบ) วีดิทัศน์บทที่ 6 เรื่องการใช้ประโยชน์จากข้อมูลของแผนที่
+TITLE_MEDIA_VDO: (ทดสอบ) วีดิทัศน์บทที่ 6
 DESCRIPTION_MEDIA_VDO: สื่อการเรียนรู้นี้เป็นสื่อประกอบในหนังสือเรียนรายวิชาเพิ่มเติมวิทยาศาสตร์และเทคโนโลยี
 SEO_DESCRIPTION_MEDIA_VDO: แผนที่ธรณีวิทยา, แผนที่ภูมิประเทศ
 SUBJECT_MEDIA_VDO: EARTH_SCIENCE
@@ -64,7 +64,7 @@ DOWNLOAD_URL_MEDIA_PDF: https://ipst-my.sharepoint.com/:p:/g/personal/lms_ipst_a
 EMBEDED_CODE_MEDIA_PDF:
 
 SLUG_MEDIA_EXERCISE: m5b3_10_light_wave_TEST
-TITLE_MEDIA_EXERCISE: (ทดสอบ) แบบฝึกหัดท้ายบทที่-10
+TITLE_MEDIA_EXERCISE: (ทดสอบ) แบบฝึกหัด 10
 DESCRIPTION_MEDIA_EXERCISE: แบบฝึกหัดท้ายบทที่ 10 แสงเชิงคลื่น วิชาฟิสิกส์ เพิ่มเติม เล่ม 3
 SEO_DESCRIPTION_MEDIA_EXERCISE: ฟิสิกส์, แสงเชิงคลื่น
 SUBJECT_MEDIA_EXERCISE: PHYSICS

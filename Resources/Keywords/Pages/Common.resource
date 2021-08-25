@@ -26,7 +26,7 @@ Open Safari Browser
     ...    3. ไปที่ Menu Develop > Click "Allow Remote Automation"
     Run Keyword IF  '${OS}'=='WIN'  Fail    msg=Window don't have Safari Browser
     Open Browser    browser=Safari    url=${url}
-    Set Selenium Speed  0.15s
+    Set Selenium Speed  0.05s
     Maximize Browser Window
 
 Open Chrome Browser
@@ -48,7 +48,7 @@ Open Microsoft Edge Browser
     [Arguments]    ${url}   ${os}
     ${ms_edge_option} =    Evaluate    sys.modules['selenium.webdriver'].EdgeOptions()    sys, selenium.webdriver
     Create Webdriver    Edge    executable_path=${MS_EDGE_DRIVER_PATH_${os}} 
-    Set Selenium Speed  0.15s
+    Set Selenium Speed  0.05s
     Maximize Browser Window
     Go To    ${url}
 
@@ -56,7 +56,7 @@ Open Firefox Browser
     [Arguments]    ${url}   ${os}
     ${firefox_options} =     Evaluate    sys.modules['selenium.webdriver'].common.desired_capabilities.DesiredCapabilities.FIREFOX    sys, selenium.webdriver
     Create Webdriver    Firefox    capabilities=${firefox_options}    executable_path=${FIREFOX_DRIVER_PATH_${os}} 
-    Set Selenium Speed  0.15s
+    Set Selenium Speed  0.05s
     Maximize Browser Window
     Go To      ${url}
 
