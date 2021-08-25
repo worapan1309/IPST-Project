@@ -48,6 +48,7 @@ Open Microsoft Edge Browser
     [Arguments]    ${url}   ${os}
     ${ms_edge_option} =    Evaluate    sys.modules['selenium.webdriver'].EdgeOptions()    sys, selenium.webdriver
     Create Webdriver    Edge    executable_path=${MS_EDGE_DRIVER_PATH_${os}} 
+    Set Selenium Speed  0.15s
     Maximize Browser Window
     Go To    ${url}
 
@@ -55,6 +56,7 @@ Open Firefox Browser
     [Arguments]    ${url}   ${os}
     ${firefox_options} =     Evaluate    sys.modules['selenium.webdriver'].common.desired_capabilities.DesiredCapabilities.FIREFOX    sys, selenium.webdriver
     Create Webdriver    Firefox    capabilities=${firefox_options}    executable_path=${FIREFOX_DRIVER_PATH_${os}} 
+    Set Selenium Speed  0.15s
     Maximize Browser Window
     Go To      ${url}
 
