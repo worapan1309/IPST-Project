@@ -25,7 +25,7 @@ ${BASKET_DETAIL_STRAPI.DOWNLOADURL.INPUT}                 //input[@id="downloadU
 ${BASKET_DETAIL_STRAPI.PURCHASEURL.INPUT}                 //input[@id="purchaseURL"]
 ${BASKET_DETAIL_STRAPI.ENTRYDELETE.BUTTON}                //div[@class="sc-lcTPrS sc-lnnytw damQna bCARSy"]
 ${BASKET_DETAIL_STRAPI.ENTRYCONFIRMDELETE.BUTTON}         //button[@class="sc-dlfnbm cMRVOr"]  
-${BASKET_DETAIL_STRAPI.LASTESTITEM.ITEM}                  (//tr[@class="sc-cRoahL fjuCED"])[1]  
+${BASKET_DETAIL_STRAPI.LASTESTITEM.ITEM}                  //table[@class="sc-bHXZN bORbIW table"]/tbody/tr[1]/td[2]       #//tr[@class="sc-cRoahL fjuCED"][1]
 ${BASKET_DETAIL_STRAPI.LASTESTITEM_FIND_SLUG.ITEM}        //p[@class="sc-jMlkEa fmBJFo"]//span[contains(text(),"${SLUG_BASKET_STRAPI}")]
 ${BASKET_DETAIL_STRAPI.ERROR_SLUG.MSG}                    //p[@class="sc-kEjbxe jbJDWL" and @id="error-slug"]
 ${BASKET_DETAIL_STRAPI.ERROR_TITLE.MSG}                   //p[@class="sc-kEjbxe jbJDWL" and @id="error-title"]
