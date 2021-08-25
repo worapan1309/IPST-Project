@@ -72,17 +72,22 @@ Upload Cover Image
     Wait And Click Element      ${BASKET_DETAIL_STRAPI.FINISH.BUTTON}      
      
 Input Download URL 
-    Wait And Click Element      ${BASKET_DETAIL_STRAPI.DOWNLOADURL.INPUT}
+    # Wait And Click Element      ${BASKET_DETAIL_STRAPI.DOWNLOADURL.INPUT}
     Wait And Fill Text          ${BASKET_DETAIL_STRAPI.DOWNLOADURL.INPUT}               ${DOWNLOADURL_BASKET_STRAPI}           
 
 Input Purchase URL  
     Wait And Click Element      ${BASKET_DETAIL_STRAPI.PURCHASEURL.INPUT}  
     Wait And Fill Text          ${BASKET_DETAIL_STRAPI.PURCHASEURL.INPUT}               ${PURCHASEURL_BASKET_STRAPI}         
 
-Save New Basket  
+Save New Basket   
+    sleep   2s
+    Set Focus To Element        ${BASKET_DETAIL_STRAPI.SAVE.BUTTON} 
+    Press Keys      ${None}     HOME
     Wait And Click Element      ${BASKET_DETAIL_STRAPI.SAVE.BUTTON} 
 
-Publish New Basket      
+Publish New Basket    
+    sleep   1s
+    Set Focus To Element        ${BASKET_DETAIL_STRAPI.PUBLISH.BUTTON} 
     Wait And Click Element      ${BASKET_DETAIL_STRAPI.PUBLISH.BUTTON} 
 
 Unpublish Basket
@@ -90,6 +95,8 @@ Unpublish Basket
     Wait And Click Element      ${BASKET_DETAIL_STRAPI.CONFIRMUNPUBLISH.BUTTON} 
     
 Back To Basket Dashboard
+    sleep   1s
+    Set Focus To Element        ${BASKET_DETAIL_STRAPI.BACK.BUTTON} 
     Wait And Click Element      ${BASKET_DETAIL_STRAPI.BACK.BUTTON} 
 
 Duplicate Basket  
