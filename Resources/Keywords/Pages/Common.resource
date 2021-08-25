@@ -26,6 +26,7 @@ Open Safari Browser
     ...    3. ไปที่ Menu Develop > Click "Allow Remote Automation"
     Run Keyword IF  '${OS}'=='WIN'  Fail    msg=Window don't have Safari Browser
     Open Browser    browser=Safari    url=${url}
+    Set Selenium Speed  0.15s
     Maximize Browser Window
 
 Open Chrome Browser
@@ -77,5 +78,6 @@ Wait And Click Element
 Wait And Fill Text
     [Arguments]     ${locator}      ${text}         
     Wait Until Element Is Visible   ${locator}      20s
+    Set Focus To Element    ${locator}
     Input Text      ${locator}   ${text}
 
