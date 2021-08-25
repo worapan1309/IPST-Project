@@ -5,7 +5,7 @@ Resource          ${EXECDIR}${/}Resources${/}Keywords${/}Pages${/}Common.resourc
 Resource          ${EXECDIR}${/}Resources${/}Keywords${/}Pages${/}Login_IPST.resource
 Resource          ${EXECDIR}${/}Resources${/}Locator${/}Pages${/}Login_IPST.resource
 
-Test Setup      Open Browser And Go To URL      Firefox      ${URL_IPST}    
+Test Setup      Open Browser And Go To URL      Firefox      ${URL_IPST}     
 Test Teardown   Close Browser
 
 *** Test Cases ***
@@ -30,19 +30,29 @@ Login_003
 Login_004
     [Documentation]     Filled With Wrong Password
     [Tags]              login
-    Wait And Click Element   ${LOGIN_IPST.LOGIN.BTN}
-    Wait And Click Element   ${LOGIN_IPST.EMAIL.BTN}
-    Wait And Fill Text      ${LOGIN_IPST.EMAIL.FIELD}   ${LOGIN_EMAIL_TEACHER}
-    Wait And Click Element   ${LOGIN_IPST.CONFIRMLOGIN.BTN}
-    ${error_msg}=   Get Text    ${LOGIN_IPST.ERRORLOGIN.MSG}
-    Should Be Equal     ${error_msg}     ${ERROR_PASSWORD_IPST}
+    Login: IPST Website    ${LOGIN_EMAIL_PARENT}  ${WRONG_PASSWORD_IPST}
+    Check Error Message    ${LOGIN_IPST.ERRORLOGIN.MSG}     ${ERROR_LOGIN_IPST}
 
 Login_005
-    [Documentation]      Filled With Wrong Email
+    [Documentation]     Filled With Wrong Email
+    [Tags]              login
+    Login: IPST Website    ${WRONG_EMAIL_IPST}  ${LOGIN_PASSWORD_PARENT}
+    Check Error Message     ${LOGIN_IPST.ERRORLOGIN.MSG}    ${ERROR_LOGIN_IPST}
+
+Login_006
+    [Documentation]      Not Filled Email
     [Tags]               login
     Wait And Click Element   ${LOGIN_IPST.LOGIN.BTN}
     Wait And Click Element   ${LOGIN_IPST.EMAIL.BTN}
     Wait And Fill Text      ${LOGIN_IPST.PASSWORD.FIELD}   ${LOGIN_PASSWORD_TEACHER}
     Wait And Click Element   ${LOGIN_IPST.CONFIRMLOGIN.BTN}
-    ${error_msg}=   Get Text    ${LOGIN_IPST.ERRORLOGIN.MSG}
-    Should Be Equal     ${error_msg}     ${ERROR_EMAIL_IPST}
+    Check Error Message     ${LOGIN_IPST.REQUIRED.MSG}      ${REQUIRED_EMAIL_IPST}
+
+Login_007
+    [Documentation]      Not Filled Password
+    [Tags]               login
+    Wait And Click Element   ${LOGIN_IPST.LOGIN.BTN}
+    Wait And Click Element   ${LOGIN_IPST.EMAIL.BTN}
+    Wait And Fill Text      ${LOGIN_IPST.EMAIL.FIELD}   ${LOGIN_EMAIL_TEACHER}
+    Wait And Click Element   ${LOGIN_IPST.CONFIRMLOGIN.BTN}
+    Check Error Message     ${LOGIN_IPST.REQUIRED.MSG}  ${REQUIRED_PASSWORD_IPST}
