@@ -26,7 +26,7 @@ Open Safari Browser
     ...    3. ไปที่ Menu Develop > Click "Allow Remote Automation"
     Run Keyword IF  '${OS}'=='WIN'  Fail    msg=Window don't have Safari Browser
     Open Browser    browser=Safari    url=${url}
-    Set Selenium Speed  0.15s
+    Set Selenium Speed  0.2s
     Maximize Browser Window
 
 Open Chrome Browser
