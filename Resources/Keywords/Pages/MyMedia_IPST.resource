@@ -10,20 +10,19 @@ Open Media
 Add Media
     Wait And Click Element   ${Preview_IPST.ADD.BTN} 
     Wait And Click Element      ${Preview_IPST.ADD_FLODER.BTN}
-
+    
 Open My Media
-    Go to       ${URL_IPST}
-    Wait And Click Element  ${Preview_IPST.MEDIA.BTN}
-
+    Go to       ${URL_MYMEDIA} 
 
 Delete Media 
     Wait And Click Element  ${MyMedia_IPST.DOT.BTN}   
     Wait And Click Element  ${MyMedia_IPST.DELETE.BTN}
     Wait And Click Element  ${MyMedia_IPST.CONFIRM_DELETE.BTN}  
+    sleep       2s
 
 Check Media
     [Arguments]     ${locator}      ${mgs}
-    Wait Until Element Is Visible       ${locator}   30s   
+    Wait Until Element Is Visible       ${locator}   20s   
     Element Text Should Be  ${locator}    ${mgs} 
 
 
