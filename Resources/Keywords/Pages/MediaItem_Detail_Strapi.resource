@@ -32,7 +32,7 @@ Add Media Item Except
     [Arguments]     ${type}     ${except}=None
     ${args}=    Copy LIST   ${LIST_FIELDS}
     Remove Values From List     ${args}     ${except}
-    ${CHECK_CONDITION}=     Set Variable    '${except}'=='slug' or '${except}'=='title' or '${except}'=='sub' or '${except}'=='edLV' or '${except}'=='cat' or '${except}'=='img' or '${except}'=='preType' or '${except}'=='preURL' or '${except}'=='download'
+    ${CHECK_CONDITION}=     Set Variable    '${except}'=='slug' or '${except}'=='title' or '${except}'=='seo' or '${except}'=='sub' or '${except}'=='edLV' or '${except}'=='cat' or '${except}'=='img' or '${except}'=='meta' or '${except}'=='preType' or '${except}'=='preURL' or '${except}'=='download'
     Wait And Click Element  ${MEDIAITEM_DETAIL.MEDIAITEM.MENU}
     Wait And Click Element  ${MEDIAITEM_DETAIL.ADDMEDIA.BTN}
 

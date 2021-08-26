@@ -40,6 +40,8 @@ Add Media Item 005
     [Tags]              MediaItem   VDO
     Add Media Item Except     VDO     seo
 
+    [Teardown]  Run Keyword If Test Failed      Teardown For Failed        VDO      Seo Description
+
 Add Media Item 006
     [Documentation]     Not Filled Subject - VDO
     [Tags]              MediaItem   VDO
@@ -72,6 +74,8 @@ Add Media Item 010
     [Documentation]     Not Filled Metadata - VDO
     [Tags]              MediaItem   VDO
     Add Media Item Except     VDO     meta
+
+    [Teardown]  Run Keyword If Test Failed      Teardown For Failed        VDO      Metadata
 
 Add Media Item 011
     [Documentation]     Not Filled Preview Type - VDO
@@ -128,6 +132,8 @@ Add Media Item 019
     [Tags]              MediaItem   PDF
     Add Media Item Except     PDF     seo
 
+    [Teardown]  Run Keyword If Test Failed      Teardown For Failed        PDF      Seo Description
+
 Add Media Item 020
     [Documentation]     Not Filled Subject - PDF
     [Tags]              MediaItem   PDF
@@ -160,6 +166,8 @@ Add Media Item 024
     [Documentation]     Not Filled Metadata - PDF
     [Tags]              MediaItem   PDF
     Add Media Item Except     PDF     meta
+
+    [Teardown]  Run Keyword If Test Failed      Teardown For Failed        PDF      Metadata
 
 Add Media Item 025
     [Documentation]     Not Filled Preview Type - PDF
@@ -216,6 +224,8 @@ Add Media Item 033
     [Tags]              MediaItem   EXERCISE
     Add Media Item Except     EXERCISE     seo
 
+    [Teardown]  Run Keyword If Test Failed      Teardown For Failed        EXERCISE      Seo Description
+
 Add Media Item 034
     [Documentation]     Not Filled Subject - EXERCISE
     [Tags]              MediaItem   EXERCISE
@@ -249,6 +259,8 @@ Add Media Item 038
     [Tags]              MediaItem   EXERCISE
     Add Media Item Except     EXERCISE     meta
 
+    [Teardown]  Run Keyword If Test Failed      Teardown For Failed        EXERCISE      Metadata
+
 Add Media Item 039
     [Documentation]     Not Filled Preview Type - EXERCISE
     [Tags]              MediaItem   EXERCISE
@@ -274,4 +286,3 @@ Add Media Item 042
     [Documentation]     Not Filled Embeded Code - EXERCISE
     [Tags]              MediaItem   EXERCISE
     Add Media Item Except     EXERCISE     embed
-    
