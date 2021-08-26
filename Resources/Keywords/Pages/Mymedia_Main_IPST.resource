@@ -1,6 +1,6 @@
 *** Settings ***
 Library           SeleniumLibrary
-Resource        ${EXECDIR}${/}Resources${/}Locator${/}Pages${/}Mymedia_Main_IPST.resource
+Resource        ${EXECDIR}${/}Resources${/}Locator${/}Pages${/}MyMedia_Main_IPST.resource
 
 *** Keywords ***
 Add media

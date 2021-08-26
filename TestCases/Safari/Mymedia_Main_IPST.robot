@@ -4,8 +4,8 @@ Variables   ${EXECDIR}${/}TestData${/}environment.yaml
 Variables   ${EXECDIR}${/}TestData${/}data.yaml
 Resource    ${EXECDIR}${/}Resources${/}Keywords${/}Pages${/}Common.resource
 Resource    ${EXECDIR}${/}Resources${/}Keywords${/}Pages${/}Login_IPST.resource
-Resource    ${EXECDIR}${/}Resources${/}Locator${/}Pages${/}Mymedia_Main_IPST.resource
-Resource    ${EXECDIR}${/}Resources${/}Keywords${/}Pages${/}Mymedia_Main_IPST.resource
+Resource    ${EXECDIR}${/}Resources${/}Locator${/}Pages${/}MyMedia_Main_IPST.resource
+Resource    ${EXECDIR}${/}Resources${/}Keywords${/}Pages${/}MyMedia_Main_IPST.resource
 
 Test Setup       Open Browser And Go To URL      Safari      ${URL_IPST}     
 Test Teardown    Close Browser
