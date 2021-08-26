@@ -87,7 +87,6 @@ Save New Basket
 
 Publish New Basket    
     sleep   1s
-    Set Focus To Element        ${BASKET_DETAIL_STRAPI.PUBLISH.BUTTON} 
     Wait And Click Element      ${BASKET_DETAIL_STRAPI.PUBLISH.BUTTON} 
 
 Unpublish Basket
