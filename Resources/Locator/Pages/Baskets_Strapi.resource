@@ -9,7 +9,7 @@ ${BASKETS_DASHBOARD_STRAPI.COMFIRMDELETE.BUTTON}          //button[@class="sc-dl
 ${BASKETS_DASHBOARD_STRAPI.ID.SORT}                       (//span[@class="sortable"])[1]  
 
 ${BASKET_DETAIL_STRAPI.BACK.BUTTON}                       //div[@class="sc-laRPJI eNpfYQ"]  
-${BASKET_DETAIL_STRAPI.PUBLISH.BUTTON}                    //button[contains(text(),"Publish")]  #//button[@class="sc-dlfnbm loMFwz"]
+${BASKET_DETAIL_STRAPI.PUBLISH.BUTTON}                    //button[@class="sc-dlfnbm loMFwz"]
 ${BASKET_DETAIL_STRAPI.UNPUBLISH.BUTTON}                  //button[contains(text(), "Unpublish")]
 ${BASKET_DETAIL_STRAPI.CONFIRMUNPUBLISH.BUTTON}           //button[@class="sc-dlfnbm cMRVOr"] 
 ${BASKET_DETAIL_STRAPI.SAVE.BUTTON}                       //button[@class="sc-dlfnbm cDlQQu"]
