@@ -52,8 +52,10 @@ Add Media Item Except
         ...    ELSE IF  '${item}'=='embed'      Wait And Fill Text  ${MEDIAITEM_DETAIL.EMBEDED_CODE.FIELD}  ${EMBEDED_CODE_MEDIA_${type}}
     END
 
+
     Set Focus To Element    ${MEDIAITEM_DETAIL.SAVE.BTN}
     Press Keys      ${None}     HOME
+    Select Dropdown Custom  //*[@id="react-select-2-input"]     โลก ดาราศาสตร์ และอวกาศ เล่ม ๓
     Wait And Click Element  ${MEDIAITEM_DETAIL.SAVE.BTN}
     Wait And Click Element  ${MEDIAITEM_DETAIL.PUBLISH.BTN}
     ${var_name}=    Convert To Upper Case       ${except}
@@ -79,4 +81,4 @@ Teardown For Failed
     [Arguments]     ${type}     ${attribute}
     Remove Media    ${type}
     Fail    '${attribute}' field needs to be filled information, but it can be published even the field is empty.
-    Close Browser
+    Close Browser  

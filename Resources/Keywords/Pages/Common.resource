@@ -83,3 +83,7 @@ Wait And Fill Text
     Set Focus To Element    ${locator}
     Input Text      ${locator}   ${text}
 
+Select Dropdown Custom
+    [Arguments]     ${loactor_dropdown}    ${value}
+    Wait And Fill Text          ${loactor_dropdown}     ${value}
+    Wait And Click Element           xpath=//div[@title="${value}"]  
