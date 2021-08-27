@@ -39,6 +39,7 @@ Open Chrome Browser
     ${kwargs}=    BuiltIn.Create Dictionary    executable_path=${CHROME_DRIVER_PATH_${os}} 
     log  ${chrome_options}
     Create Webdriver    Chrome    chrome_options=${chrome_options}    kwargs=${kwargs}
+    Set Selenium Speed  0.05s
     Maximize Browser Window
     Go To      ${url}
 

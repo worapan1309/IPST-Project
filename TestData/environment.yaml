@@ -39,6 +39,8 @@ DOWNLOADURL_BASKET_STRAPI: https://ipst-hub.skooldio.com/medias/%E0%B8%84%E0%B8%
 PURCHASEURL_BASKET_STRAPI: https://www.chulabook.com/th/product-details/98218
 
 # Add Media Item
+BASKET_MEDIA: เทคโนโลยี (การออกแบบและเทคโนโลยี)  สำหรับทดสอบ
+
 SLUG_MEDIA_VDO: M4EC_071_vdo-Test
 TITLE_MEDIA_VDO: (ทดสอบ) วีดิทัศน์บทที่ 6
 DESCRIPTION_MEDIA_VDO: สื่อการเรียนรู้นี้เป็นสื่อประกอบในหนังสือเรียนรายวิชาเพิ่มเติมวิทยาศาสตร์และเทคโนโลยี
