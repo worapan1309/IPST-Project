@@ -46,3 +46,5 @@ ${MEDIAITEM_DETAIL.ERROR_META.MSG}  xPath=//p[@class="sc-kEjbxe jbJDWL" and @id=
 ${MEDIAITEM_DETAIL.ERROR_PRETYPE.MSG}  xPath=//p[@class="sc-kEjbxe jbJDWL" and @id="error-previewType"]
 ${MEDIAITEM_DETAIL.ERROR_PREURL.MSG}  xPath=//p[@class="sc-kEjbxe jbJDWL" and @id="error-previewURL"]
 ${MEDIAITEM_DETAIL.ERROR_DOWNLOAD.MSG}  xPath=//p[@class="sc-kEjbxe jbJDWL" and @id="error-downloadURL"]
+
+${MEDIAITEM_DETAIL.BASKETS.DROPDOWN}    xPath=//*[@id="react-select-2-input"]

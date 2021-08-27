@@ -52,10 +52,11 @@ Add Media Item Except
         ...    ELSE IF  '${item}'=='embed'      Wait And Fill Text  ${MEDIAITEM_DETAIL.EMBEDED_CODE.FIELD}  ${EMBEDED_CODE_MEDIA_${type}}
     END
 
-
+    Clear Manual Popup
     Set Focus To Element    ${MEDIAITEM_DETAIL.SAVE.BTN}
     Press Keys      ${None}     HOME
-    Select Dropdown Custom  //*[@id="react-select-2-input"]     โลก ดาราศาสตร์ และอวกาศ เล่ม ๓
+    Run Keyword Unless      '${except}'=='basket'   Select Dropdown Custom  ${MEDIAITEM_DETAIL.BASKETS.DROPDOWN}     ${BASKET_MEDIA}
+    
     Wait And Click Element  ${MEDIAITEM_DETAIL.SAVE.BTN}
     Wait And Click Element  ${MEDIAITEM_DETAIL.PUBLISH.BTN}
     ${var_name}=    Convert To Upper Case       ${except}
@@ -73,7 +74,6 @@ Remove Media
     ${status}   ${value}=   Run Keyword And Ignore Error    Wait And Click Element  ${MEDIAITEM_DETAIL.LASTESTITEM_${type}.ITEM}
     Run Keyword If  '${status}' == 'FAIL'   Wait And Click Element  ${MEDIAITEM_DETAIL.LASTESTITEM_${type}_FIND_SLUG.ITEM}
     
-    Clear Manual Popup
     Wait And Click Element  ${MEDIAITEM_DETAIL.DELETE.BTN}
     Wait And Click Element  ${MEDIAITEM_DETAIL.CONFIRM_DELETE.BTN}
 
