@@ -37,10 +37,12 @@ ${MEDIAITEM_DETAIL.CONFIRM_DELETE.BTN}      xPath=//button[@class="sc-dlfnbm cMR
 
 ${MEDIAITEM_DETAIL.ERROR_SLUG.MSG}  xPath=//p[@class="sc-kEjbxe jbJDWL" and @id="error-slug"]
 ${MEDIAITEM_DETAIL.ERROR_TITLE.MSG}  xPath=//p[@class="sc-kEjbxe jbJDWL" and @id="error-title"]
+${MEDIAITEM_DETAIL.ERROR_SEO.MSG}  xPath=//p[@class="sc-kEjbxe jbJDWL" and @id="error-seoDescription"]
 ${MEDIAITEM_DETAIL.ERROR_SUB.MSG}  xPath=//p[@class="sc-kEjbxe jbJDWL" and @id="error-subject"]
 ${MEDIAITEM_DETAIL.ERROR_EDLV.MSG}  xPath=//p[@class="sc-kEjbxe jbJDWL" and @id="error-educationLevel"]
 ${MEDIAITEM_DETAIL.ERROR_CAT.MSG}  xPath=//p[@class="sc-kEjbxe jbJDWL" and @id="error-category"]
 ${MEDIAITEM_DETAIL.ERROR_IMG.MSG}  xPath=//p[@class="sc-kEjbxe jbJDWL" and @id="error-coverImage"]
+${MEDIAITEM_DETAIL.ERROR_META.MSG}  xPath=//p[@class="sc-kEjbxe jbJDWL" and @id="error-metadata"]
 ${MEDIAITEM_DETAIL.ERROR_PRETYPE.MSG}  xPath=//p[@class="sc-kEjbxe jbJDWL" and @id="error-previewType"]
 ${MEDIAITEM_DETAIL.ERROR_PREURL.MSG}  xPath=//p[@class="sc-kEjbxe jbJDWL" and @id="error-previewURL"]
 ${MEDIAITEM_DETAIL.ERROR_DOWNLOAD.MSG}  xPath=//p[@class="sc-kEjbxe jbJDWL" and @id="error-downloadURL"]
