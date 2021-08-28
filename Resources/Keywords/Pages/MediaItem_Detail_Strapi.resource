@@ -9,13 +9,6 @@ Resource        ${EXECDIR}${/}Resources${/}Locator${/}Pages${/}MediaItem_Detail_
 @{LIST_FIELDS}=     slug    title   des     seo     sub     edLV    cat     img     meta    preType     preURL      download    embed
 
 *** Keywords ***
-Select Dropdown
-    [Arguments]     ${locator}  ${select}   
-    Wait Until Element Is Visible       ${locator}
-    Click Element  ${locator}
-    Wait Until Element Is Visible       xPath=//option[contains(text(),"${select}")]
-    Click Element    xPath=//option[contains(text(),"${select}")]
-
 Select Cover Image
     Wait And Click Element  ${MEDIAITEM_DETAIL.COVERIMAGE.SELECT}
     Wait And Click Element  ${MEDIAITEM_DETAIL.SELECTED.IMG}
@@ -41,22 +34,21 @@ Add Media Item Except
         ...    ELSE IF  '${item}'=='title'      Wait And Fill Text  ${MEDIAITEM_DETAIL.TITLE.FIELD}  ${TITLE_MEDIA_${type}}
         ...    ELSE IF  '${item}'=='des'        Wait And Fill Text  ${MEDIAITEM_DETAIL.DESCRIPTION.FIELD}  ${DESCRIPTION_MEDIA_${type}}
         ...    ELSE IF  '${item}'=='seo'        Wait And Fill Text  ${MEDIAITEM_DETAIL.SEO_DESCRIPTION.FIELD}  ${SEO_DESCRIPTION_MEDIA_${type}}
-        ...    ELSE IF  '${item}'=='sub'        Select Dropdown     ${MEDIAITEM_DETAIL.SUBJECT.DROPDOWN}    ${SUBJECT_MEDIA_${type}}
-        ...    ELSE IF  '${item}'=='edLV'       Select Dropdown     ${MEDIAITEM_DETAIL.EDUCATION_LEVEL.DROPDOWN}    ${EDUCATION_LEVEL_MEDIA_${type}}
-        ...    ELSE IF  '${item}'=='cat'        Select Dropdown     ${MEDIAITEM_DETAIL.CATEGORY.DROPDOWN}    ${CATEGORY_MEDIA_${type}}
+        ...    ELSE IF  '${item}'=='sub'        Select From List By Value     ${MEDIAITEM_DETAIL.SUBJECT.DROPDOWN}    ${SUBJECT_MEDIA_${type}}
+        ...    ELSE IF  '${item}'=='edLV'       Select From List By Value     ${MEDIAITEM_DETAIL.EDUCATION_LEVEL.DROPDOWN}    ${EDUCATION_LEVEL_MEDIA_${type}}
+        ...    ELSE IF  '${item}'=='cat'        Select From List By Value     ${MEDIAITEM_DETAIL.CATEGORY.DROPDOWN}    ${CATEGORY_MEDIA_${type}}
         ...    ELSE IF  '${item}'=='img'        Select Cover Image
         ...    ELSE IF  '${item}'=='meta'       Wait And Fill Text  ${MEDIAITEM_DETAIL.METADATA.FIELD}  ${METADATA_MEDIA_${type}}
-        ...    ELSE IF  '${item}'=='preType'    Select Dropdown     ${MEDIAITEM_DETAIL.PREVIEW_TYPE.DROPDOWN}   ${PREVIEW_TYPE_MEDIA_${type}}
+        ...    ELSE IF  '${item}'=='preType'    Select From List By Value     ${MEDIAITEM_DETAIL.PREVIEW_TYPE.DROPDOWN}   ${PREVIEW_TYPE_MEDIA_${type}}
         ...    ELSE IF  '${item}'=='preURL'     Wait And Fill Text  ${MEDIAITEM_DETAIL.PREVIEW_URL.FIELD}   ${PREVIEW_URL_MEDIA_${type}}
         ...    ELSE IF  '${item}'=='download'   Wait And Fill Text  ${MEDIAITEM_DETAIL.DOWNLOAD_URL.FIELD}  ${DOWNLOAD_URL_MEDIA_${type}}
         ...    ELSE IF  '${item}'=='embed'      Wait And Fill Text  ${MEDIAITEM_DETAIL.EMBEDED_CODE.FIELD}  ${EMBEDED_CODE_MEDIA_${type}}
     END
 
-    Clear Manual Popup
+
     Set Focus To Element    ${MEDIAITEM_DETAIL.SAVE.BTN}
     Press Keys      ${None}     HOME
-    Run Keyword Unless      '${except}'=='basket'   Select Dropdown Custom  ${MEDIAITEM_DETAIL.BASKETS.DROPDOWN}     ${BASKET_MEDIA}
-    
+    Select Dropdown Custom  //*[@id="react-select-2-input"]     โลก ดาราศาสตร์ และอวกาศ เล่ม ๓
     Wait And Click Element  ${MEDIAITEM_DETAIL.SAVE.BTN}
     Wait And Click Element  ${MEDIAITEM_DETAIL.PUBLISH.BTN}
     ${var_name}=    Convert To Upper Case       ${except}
@@ -74,6 +66,7 @@ Remove Media
     ${status}   ${value}=   Run Keyword And Ignore Error    Wait And Click Element  ${MEDIAITEM_DETAIL.LASTESTITEM_${type}.ITEM}
     Run Keyword If  '${status}' == 'FAIL'   Wait And Click Element  ${MEDIAITEM_DETAIL.LASTESTITEM_${type}_FIND_SLUG.ITEM}
     
+    Clear Manual Popup
     Wait And Click Element  ${MEDIAITEM_DETAIL.DELETE.BTN}
     Wait And Click Element  ${MEDIAITEM_DETAIL.CONFIRM_DELETE.BTN}
 
