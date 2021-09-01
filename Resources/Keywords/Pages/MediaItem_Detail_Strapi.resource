@@ -39,7 +39,7 @@ Add Media Item Except
         ...    ELSE IF  '${item}'=='cat'        Select Category     ${type}  
         ...    ELSE IF  '${item}'=='img'        Select Cover Image
         ...    ELSE IF  '${item}'=='meta'       Wait And Fill Text  ${MEDIAITEM_DETAIL.METADATA.FIELD}  ${METADATA_MEDIA_${type}}
-        ...    ELSE IF  '${item}'=='preType'    Select From List By Value     ${MEDIAITEM_DETAIL.PREVIEW_TYPE.DROPDOWN}   ${PREVIEW_TYPE_MEDIA_${type}}
+        ...    ELSE IF  '${item}'=='preType'    Select Preview Type     ${type}
         ...    ELSE IF  '${item}'=='preURL'     Wait And Fill Text  ${MEDIAITEM_DETAIL.PREVIEW_URL.FIELD}   ${PREVIEW_URL_MEDIA_${type}}
         ...    ELSE IF  '${item}'=='download'   Wait And Fill Text  ${MEDIAITEM_DETAIL.DOWNLOAD_URL.FIELD}  ${DOWNLOAD_URL_MEDIA_${type}}
         ...    ELSE IF  '${item}'=='embed'      Wait And Fill Text  ${MEDIAITEM_DETAIL.EMBEDED_CODE.FIELD}  ${EMBEDED_CODE_MEDIA_${type}}
@@ -89,3 +89,8 @@ Select Category
     [Arguments]     ${type}
     Set Focus To Element          ${MEDIAITEM_DETAIL.CATEGORY.DROPDOWN}  
     Select From List By Value     ${MEDIAITEM_DETAIL.CATEGORY.DROPDOWN}    ${CATEGORY_MEDIA_${type}}
+
+Select Preview Type
+    [Arguments]     ${type}
+    Set Focus To Element        ${MEDIAITEM_DETAIL.PREVIEW_TYPE.DROPDOWN}            
+    Select From List By Value   ${MEDIAITEM_DETAIL.PREVIEW_TYPE.DROPDOWN}   ${PREVIEW_TYPE_MEDIA_${type}}   
