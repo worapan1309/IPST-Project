@@ -35,8 +35,8 @@ Add Media Item Except
         ...    ELSE IF  '${item}'=='des'        Wait And Fill Text  ${MEDIAITEM_DETAIL.DESCRIPTION.FIELD}  ${DESCRIPTION_MEDIA_${type}}
         ...    ELSE IF  '${item}'=='seo'        Wait And Fill Text  ${MEDIAITEM_DETAIL.SEO_DESCRIPTION.FIELD}  ${SEO_DESCRIPTION_MEDIA_${type}}
         ...    ELSE IF  '${item}'=='sub'        Select From List By Value     ${MEDIAITEM_DETAIL.SUBJECT.DROPDOWN}    ${SUBJECT_MEDIA_${type}}
-        ...    ELSE IF  '${item}'=='edLV'       Select From List By Value     ${MEDIAITEM_DETAIL.EDUCATION_LEVEL.DROPDOWN}    ${EDUCATION_LEVEL_MEDIA_${type}}
-        ...    ELSE IF  '${item}'=='cat'        Select From List By Value     ${MEDIAITEM_DETAIL.CATEGORY.DROPDOWN}    ${CATEGORY_MEDIA_${type}}
+        ...    ELSE IF  '${item}'=='edLV'       Select Education Level        ${type}  
+        ...    ELSE IF  '${item}'=='cat'        Select Category     ${type}  
         ...    ELSE IF  '${item}'=='img'        Select Cover Image
         ...    ELSE IF  '${item}'=='meta'       Wait And Fill Text  ${MEDIAITEM_DETAIL.METADATA.FIELD}  ${METADATA_MEDIA_${type}}
         ...    ELSE IF  '${item}'=='preType'    Select From List By Value     ${MEDIAITEM_DETAIL.PREVIEW_TYPE.DROPDOWN}   ${PREVIEW_TYPE_MEDIA_${type}}
@@ -52,6 +52,8 @@ Add Media Item Except
     Run Keyword Unless      '${except}'=='basket'   Select Dropdown Custom  ${MEDIAITEM_DETAIL.BASKETS.DROPDOWN}     ${BASKET_MEDIA}
     
     Wait And Click Element  ${MEDIAITEM_DETAIL.SAVE.BTN}
+    Set Focus To Element    ${MEDIAITEM_DETAIL.PUBLISH.BTN}
+    sleep  2s
     Wait And Click Element  ${MEDIAITEM_DETAIL.PUBLISH.BTN}
     ${var_name}=    Convert To Upper Case       ${except}
 
@@ -74,5 +76,16 @@ Remove Media
 Teardown For Failed
     [Arguments]     ${type}     ${attribute}
     Remove Media    ${type}
+    Close Browser
     Fail    '${attribute}' field needs to be filled information, but it can be published even the field is empty.
-    Close Browser  
+      
+
+Select Education Level    
+    [Arguments]     ${type}
+    Set Focus To Element          ${MEDIAITEM_DETAIL.EDUCATION_LEVEL.DROPDOWN}
+    Select From List By Value     ${MEDIAITEM_DETAIL.EDUCATION_LEVEL.DROPDOWN}    ${EDUCATION_LEVEL_MEDIA_${type}}          
+
+Select Category                     
+    [Arguments]     ${type}
+    Set Focus To Element          ${MEDIAITEM_DETAIL.CATEGORY.DROPDOWN}  
+    Select From List By Value     ${MEDIAITEM_DETAIL.CATEGORY.DROPDOWN}    ${CATEGORY_MEDIA_${type}}
