@@ -20,7 +20,7 @@ ${MEDIAITEM_DETAIL.PREVIEW_URL.FIELD}    xPath=//input[@name="previewURL"]
 ${MEDIAITEM_DETAIL.DOWNLOAD_URL.FIELD}    xPath=//input[@name="downloadURL"]
 ${MEDIAITEM_DETAIL.EMBEDED_CODE.FIELD}    xPath=//textarea[@name="embeddedCode"]
 ${MEDIAITEM_DETAIL.SAVE.BTN}  xPath=//button[@class="sc-dlfnbm cDlQQu" and @type="submit"]
-${MEDIAITEM_DETAIL.PUBLISH.BTN}    xPath=//button[@class="sc-dlfnbm loMFwz"]
+${MEDIAITEM_DETAIL.PUBLISH.BTN}    xPath=//button[contains(text(),"Publish")]  
 ${MEDIAITEM_DETAIL.BACK.BTN}    xPath=//div[@class="sc-laRPJI eNpfYQ"]
 ${MEDIAITEM_DETAIL.ID.SORT}    xPath=(//span[@class="sortable"])[1]
 
