@@ -126,6 +126,32 @@ robot -v OS:MAC TestCases/Firefox/Mymedia_Main_IPST.robot
 
 robot -v OS:MAC TestCases/Safari/Mymedia_Main_IPST.robot 
 
+
+------------------------------------------------------------------------------
+
+** วิธีการ run ทีละ TestCase **
+
+Windows
+robot -t "tsname" filename
+
+MAC
+robot -t "tsname" -v OS:MAC filename
+
+
+------------------------------------------------------------------------------
+
+** วิธีการ run จาก tag **
+
+Windows
+robot -i tagname filename
+
+MAC
+robot -i tagname -v OS:MAC filename
+
+
+
+
+
  
 
  
