@@ -1,6 +1,6 @@
 *** Settings ***
-Library           SeleniumLibrary
-Library           Collections
+Library           SeleniumLibrary    # https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html
+Library           Collections        # https://robotframework.org/robotframework/latest/libraries/Collections.html
 
 *** Variables ***
 ${CHROME_DRIVER_PATH_MAC}      ${EXECDIR}${/}drivers${/}chrome${/}mac${/}chromedriver_92
