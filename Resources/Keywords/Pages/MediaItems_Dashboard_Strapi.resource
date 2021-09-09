@@ -52,6 +52,8 @@ Edit Fields
     Set Focus To Element    ${MEDIAITEM_DETAIL.SAVE.BTN}
     Press Keys      ${None}     HOME
     Wait And Click Element  ${MEDIAITEM_DETAIL.SAVE.BTN}
+
+    Set Focus To Element    ${MEDIAITEM_DETAIL.PUBLISH.BTN}
     Wait And Click Element  ${MEDIAITEM_DETAIL.PUBLISH.BTN}
 
 Unpublish Media Item
